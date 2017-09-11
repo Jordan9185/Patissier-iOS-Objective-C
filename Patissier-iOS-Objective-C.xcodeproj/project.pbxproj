@@ -10,12 +10,12 @@
 		15668EBC1F66601600A26036 /* ProductCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15668EBB1F66601600A26036 /* ProductCollectionViewController.m */; };
 		15668EBF1F66603100A26036 /* ProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15668EBE1F66603100A26036 /* ProductCollectionViewCell.m */; };
 		15668EC11F66617D00A26036 /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15668EC01F66617D00A26036 /* Product.storyboard */; };
+		15668EC51F667DDF00A26036 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15668EC41F667DDF00A26036 /* Main.storyboard */; };
 		98E15DA31F661F0C000E1B9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E15DA21F661F0C000E1B9B /* main.m */; };
 		98E15DA61F661F0C000E1B9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E15DA51F661F0C000E1B9B /* AppDelegate.m */; };
 		98E15DAE1F661F0C000E1B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98E15DAD1F661F0C000E1B9B /* Assets.xcassets */; };
 		98E15DB11F661F0C000E1B9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98E15DAF1F661F0C000E1B9B /* LaunchScreen.storyboard */; };
 		98E15DBD1F6623D3000E1B9B /* LandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E15DBC1F6623D3000E1B9B /* LandingViewController.m */; };
-		98E15DBF1F662597000E1B9B /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98E15DBE1F662597000E1B9B /* Landing.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +24,7 @@
 		15668EBD1F66603100A26036 /* ProductCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCollectionViewCell.h; sourceTree = "<group>"; };
 		15668EBE1F66603100A26036 /* ProductCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCollectionViewCell.m; sourceTree = "<group>"; };
 		15668EC01F66617D00A26036 /* Product.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Product.storyboard; path = ../Product.storyboard; sourceTree = "<group>"; };
+		15668EC41F667DDF00A26036 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = LandingViewController/Main.storyboard; sourceTree = "<group>"; };
 		98E15D9E1F661F0C000E1B9B /* Patissier-iOS-Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Patissier-iOS-Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E15DA21F661F0C000E1B9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		98E15DA41F661F0C000E1B9B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,7 +34,6 @@
 		98E15DB21F661F0C000E1B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98E15DBB1F6623D3000E1B9B /* LandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LandingViewController.h; path = LandingViewController/LandingViewController.h; sourceTree = "<group>"; };
 		98E15DBC1F6623D3000E1B9B /* LandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandingViewController.m; path = LandingViewController/LandingViewController.m; sourceTree = "<group>"; };
-		98E15DBE1F662597000E1B9B /* Landing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Landing.storyboard; path = LandingViewController/Landing.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +111,7 @@
 			children = (
 				98E15DBB1F6623D3000E1B9B /* LandingViewController.h */,
 				98E15DBC1F6623D3000E1B9B /* LandingViewController.m */,
-				98E15DBE1F662597000E1B9B /* Landing.storyboard */,
+				15668EC41F667DDF00A26036 /* Main.storyboard */,
 			);
 			name = Landing;
 			sourceTree = "<group>";
@@ -147,7 +147,7 @@
 				TargetAttributes = {
 					98E15D9D1F661F0C000E1B9B = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = MH7SBDD83A;
+						DevelopmentTeam = 78Y9MSJT25;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -178,7 +178,7 @@
 				98E15DB11F661F0C000E1B9B /* LaunchScreen.storyboard in Resources */,
 				98E15DAE1F661F0C000E1B9B /* Assets.xcassets in Resources */,
 				15668EC11F66617D00A26036 /* Product.storyboard in Resources */,
-				98E15DBF1F662597000E1B9B /* Landing.storyboard in Resources */,
+				15668EC51F667DDF00A26036 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +305,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MH7SBDD83A;
+				DEVELOPMENT_TEAM = 78Y9MSJT25;
 				INFOPLIST_FILE = "Patissier-iOS-Objective-C/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JD.Patissier-iOS-Objective-C";
@@ -317,7 +317,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MH7SBDD83A;
+				DEVELOPMENT_TEAM = 78Y9MSJT25;
 				INFOPLIST_FILE = "Patissier-iOS-Objective-C/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JD.Patissier-iOS-Objective-C";
