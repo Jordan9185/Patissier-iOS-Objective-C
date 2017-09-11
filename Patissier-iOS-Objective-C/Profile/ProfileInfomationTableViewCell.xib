@@ -21,6 +21,9 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lPO-Y8-p2f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="219.5"/>
                         <color key="backgroundColor" red="0.44705882670000002" green="0.73333334920000004" blue="0.62352943419999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="220" id="Ise-zn-FwU"/>
+                        </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZV-Ue-IKl">
                         <rect key="frame" x="0.0" y="139.5" width="154" height="60"/>

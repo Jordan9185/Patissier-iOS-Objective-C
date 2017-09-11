@@ -11,6 +11,8 @@
 		644DFE2B1F66618C008B29A6 /* ProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 644DFE2A1F66618C008B29A6 /* ProfileTableViewController.m */; };
 		644DFE301F66624E008B29A6 /* ProfileInfomationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 644DFE2E1F66624E008B29A6 /* ProfileInfomationTableViewCell.m */; };
 		644DFE311F66624E008B29A6 /* ProfileInfomationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 644DFE2F1F66624E008B29A6 /* ProfileInfomationTableViewCell.xib */; };
+		644DFE341F666624008B29A6 /* ProfileSegmentedControlTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 644DFE331F666624008B29A6 /* ProfileSegmentedControlTableViewCell.m */; };
+		644DFE361F666640008B29A6 /* ProfileSegmentedControlTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 644DFE351F666640008B29A6 /* ProfileSegmentedControlTableViewCell.xib */; };
 		98E15DA31F661F0C000E1B9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E15DA21F661F0C000E1B9B /* main.m */; };
 		98E15DA61F661F0C000E1B9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E15DA51F661F0C000E1B9B /* AppDelegate.m */; };
 		98E15DAE1F661F0C000E1B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98E15DAD1F661F0C000E1B9B /* Assets.xcassets */; };
@@ -26,6 +28,9 @@
 		644DFE2D1F66624E008B29A6 /* ProfileInfomationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileInfomationTableViewCell.h; path = Profile/ProfileInfomationTableViewCell.h; sourceTree = "<group>"; };
 		644DFE2E1F66624E008B29A6 /* ProfileInfomationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileInfomationTableViewCell.m; path = Profile/ProfileInfomationTableViewCell.m; sourceTree = "<group>"; };
 		644DFE2F1F66624E008B29A6 /* ProfileInfomationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileInfomationTableViewCell.xib; path = Profile/ProfileInfomationTableViewCell.xib; sourceTree = "<group>"; };
+		644DFE321F666624008B29A6 /* ProfileSegmentedControlTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileSegmentedControlTableViewCell.h; path = Profile/ProfileSegmentedControlTableViewCell.h; sourceTree = "<group>"; };
+		644DFE331F666624008B29A6 /* ProfileSegmentedControlTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileSegmentedControlTableViewCell.m; path = Profile/ProfileSegmentedControlTableViewCell.m; sourceTree = "<group>"; };
+		644DFE351F666640008B29A6 /* ProfileSegmentedControlTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileSegmentedControlTableViewCell.xib; path = Profile/ProfileSegmentedControlTableViewCell.xib; sourceTree = "<group>"; };
 		98E15D9E1F661F0C000E1B9B /* Patissier-iOS-Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Patissier-iOS-Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E15DA21F661F0C000E1B9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		98E15DA41F661F0C000E1B9B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,6 +63,9 @@
 				644DFE2D1F66624E008B29A6 /* ProfileInfomationTableViewCell.h */,
 				644DFE2E1F66624E008B29A6 /* ProfileInfomationTableViewCell.m */,
 				644DFE2F1F66624E008B29A6 /* ProfileInfomationTableViewCell.xib */,
+				644DFE321F666624008B29A6 /* ProfileSegmentedControlTableViewCell.h */,
+				644DFE331F666624008B29A6 /* ProfileSegmentedControlTableViewCell.m */,
+				644DFE351F666640008B29A6 /* ProfileSegmentedControlTableViewCell.xib */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -178,6 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				644DFE361F666640008B29A6 /* ProfileSegmentedControlTableViewCell.xib in Resources */,
 				98E15DB11F661F0C000E1B9B /* LaunchScreen.storyboard in Resources */,
 				98E15DAE1F661F0C000E1B9B /* Assets.xcassets in Resources */,
 				644DFE311F66624E008B29A6 /* ProfileInfomationTableViewCell.xib in Resources */,
@@ -197,6 +206,7 @@
 				98E15DA61F661F0C000E1B9B /* AppDelegate.m in Sources */,
 				98E15DA31F661F0C000E1B9B /* main.m in Sources */,
 				644DFE2B1F66618C008B29A6 /* ProfileTableViewController.m in Sources */,
+				644DFE341F666624008B29A6 /* ProfileSegmentedControlTableViewCell.m in Sources */,
 				644DFE301F66624E008B29A6 /* ProfileInfomationTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
