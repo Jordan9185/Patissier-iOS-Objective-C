@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		644DFE281F665F99008B29A6 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 644DFE271F665F99008B29A6 /* Profile.storyboard */; };
+		644DFE2B1F66618C008B29A6 /* ProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 644DFE2A1F66618C008B29A6 /* ProfileTableViewController.m */; };
+		644DFE301F66624E008B29A6 /* ProfileInfomationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 644DFE2E1F66624E008B29A6 /* ProfileInfomationTableViewCell.m */; };
+		644DFE311F66624E008B29A6 /* ProfileInfomationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 644DFE2F1F66624E008B29A6 /* ProfileInfomationTableViewCell.xib */; };
 		98E15DA31F661F0C000E1B9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E15DA21F661F0C000E1B9B /* main.m */; };
 		98E15DA61F661F0C000E1B9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E15DA51F661F0C000E1B9B /* AppDelegate.m */; };
 		98E15DAE1F661F0C000E1B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98E15DAD1F661F0C000E1B9B /* Assets.xcassets */; };
@@ -18,6 +21,11 @@
 
 /* Begin PBXFileReference section */
 		644DFE271F665F99008B29A6 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		644DFE291F66618C008B29A6 /* ProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileTableViewController.h; sourceTree = "<group>"; };
+		644DFE2A1F66618C008B29A6 /* ProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileTableViewController.m; sourceTree = "<group>"; };
+		644DFE2D1F66624E008B29A6 /* ProfileInfomationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileInfomationTableViewCell.h; path = Profile/ProfileInfomationTableViewCell.h; sourceTree = "<group>"; };
+		644DFE2E1F66624E008B29A6 /* ProfileInfomationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileInfomationTableViewCell.m; path = Profile/ProfileInfomationTableViewCell.m; sourceTree = "<group>"; };
+		644DFE2F1F66624E008B29A6 /* ProfileInfomationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileInfomationTableViewCell.xib; path = Profile/ProfileInfomationTableViewCell.xib; sourceTree = "<group>"; };
 		98E15D9E1F661F0C000E1B9B /* Patissier-iOS-Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Patissier-iOS-Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E15DA21F661F0C000E1B9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		98E15DA41F661F0C000E1B9B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -41,6 +49,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		644DFE2C1F6661F2008B29A6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				644DFE271F665F99008B29A6 /* Profile.storyboard */,
+				644DFE291F66618C008B29A6 /* ProfileTableViewController.h */,
+				644DFE2A1F66618C008B29A6 /* ProfileTableViewController.m */,
+				644DFE2D1F66624E008B29A6 /* ProfileInfomationTableViewCell.h */,
+				644DFE2E1F66624E008B29A6 /* ProfileInfomationTableViewCell.m */,
+				644DFE2F1F66624E008B29A6 /* ProfileInfomationTableViewCell.xib */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
 		98E15D951F661F0C000E1B9B = {
 			isa = PBXGroup;
 			children = (
@@ -62,7 +83,7 @@
 			children = (
 				98E15DB81F662327000E1B9B /* AppDelegate */,
 				98E15DB91F662348000E1B9B /* Landing */,
-				644DFE271F665F99008B29A6 /* Profile.storyboard */,
+				644DFE2C1F6661F2008B29A6 /* Profile */,
 				98E15DAD1F661F0C000E1B9B /* Assets.xcassets */,
 				98E15DAF1F661F0C000E1B9B /* LaunchScreen.storyboard */,
 				98E15DB21F661F0C000E1B9B /* Info.plist */,
@@ -159,6 +180,7 @@
 			files = (
 				98E15DB11F661F0C000E1B9B /* LaunchScreen.storyboard in Resources */,
 				98E15DAE1F661F0C000E1B9B /* Assets.xcassets in Resources */,
+				644DFE311F66624E008B29A6 /* ProfileInfomationTableViewCell.xib in Resources */,
 				644DFE281F665F99008B29A6 /* Profile.storyboard in Resources */,
 				98E15DBF1F662597000E1B9B /* Landing.storyboard in Resources */,
 			);
@@ -174,6 +196,8 @@
 				98E15DBD1F6623D3000E1B9B /* LandingViewController.m in Sources */,
 				98E15DA61F661F0C000E1B9B /* AppDelegate.m in Sources */,
 				98E15DA31F661F0C000E1B9B /* main.m in Sources */,
+				644DFE2B1F66618C008B29A6 /* ProfileTableViewController.m in Sources */,
+				644DFE301F66624E008B29A6 /* ProfileInfomationTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
