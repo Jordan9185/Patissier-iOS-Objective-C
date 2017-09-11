@@ -31,7 +31,7 @@ static NSString * const reuseIdentifier = @"ProductCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    recievedProducts = @[@"a", @"b", @"c"];
 
 }
 
@@ -63,7 +63,7 @@ static NSString * const reuseIdentifier = @"ProductCell";
     ProductCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
-    //cell.product
+    cell.productNameLabel.text = [recievedProducts objectAtIndex:indexPath.row];
     
     return cell;
 }
