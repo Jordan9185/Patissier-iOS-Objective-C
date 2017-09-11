@@ -10,4 +10,6 @@
 
 @interface LandingViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIImageView *landingImageView;
+
 @end
