@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UIViewController+LandingViewController.h
 //  Patissier-iOS-Objective-C
 //
 //  Created by JordanLin on 2017/9/11.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LandingViewController: UIViewController
 
 @end
-
