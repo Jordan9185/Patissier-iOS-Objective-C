@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		644DFE281F665F99008B29A6 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 644DFE271F665F99008B29A6 /* Profile.storyboard */; };
 		98E15DA31F661F0C000E1B9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E15DA21F661F0C000E1B9B /* main.m */; };
 		98E15DA61F661F0C000E1B9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E15DA51F661F0C000E1B9B /* AppDelegate.m */; };
 		98E15DAE1F661F0C000E1B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98E15DAD1F661F0C000E1B9B /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		644DFE271F665F99008B29A6 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		98E15D9E1F661F0C000E1B9B /* Patissier-iOS-Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Patissier-iOS-Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E15DA21F661F0C000E1B9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		98E15DA41F661F0C000E1B9B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				98E15DB81F662327000E1B9B /* AppDelegate */,
 				98E15DB91F662348000E1B9B /* Landing */,
+				644DFE271F665F99008B29A6 /* Profile.storyboard */,
 				98E15DAD1F661F0C000E1B9B /* Assets.xcassets */,
 				98E15DAF1F661F0C000E1B9B /* LaunchScreen.storyboard */,
 				98E15DB21F661F0C000E1B9B /* Info.plist */,
@@ -156,6 +159,7 @@
 			files = (
 				98E15DB11F661F0C000E1B9B /* LaunchScreen.storyboard in Resources */,
 				98E15DAE1F661F0C000E1B9B /* Assets.xcassets in Resources */,
+				644DFE281F665F99008B29A6 /* Profile.storyboard in Resources */,
 				98E15DBF1F662597000E1B9B /* Landing.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +324,7 @@
 				98E15DB71F661F0C000E1B9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
