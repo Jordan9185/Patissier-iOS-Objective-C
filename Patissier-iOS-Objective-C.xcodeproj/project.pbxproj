@@ -32,9 +32,9 @@
 		644DFE3B1F6682A5008B29A6 /* ProfileSegmentedControlTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileSegmentedControlTableViewCell.h; sourceTree = "<group>"; };
 		644DFE3C1F6682A5008B29A6 /* ProfileSegmentedControlTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileSegmentedControlTableViewCell.m; sourceTree = "<group>"; };
 		644DFE3D1F6682A5008B29A6 /* ProfileSegmentedControlTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileSegmentedControlTableViewCell.xib; sourceTree = "<group>"; };
-		644DFE3E1F6682A5008B29A6 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
-		644DFE3F1F6682A5008B29A6 /* ProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileTableViewController.h; sourceTree = "<group>"; };
-		644DFE401F6682A5008B29A6 /* ProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileTableViewController.m; sourceTree = "<group>"; };
+		644DFE3E1F6682A5008B29A6 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = "Patissier-iOS-Objective-C/Profile.storyboard"; sourceTree = SOURCE_ROOT; };
+		644DFE3F1F6682A5008B29A6 /* ProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileTableViewController.h; path = "Patissier-iOS-Objective-C/ProfileTableViewController.h"; sourceTree = SOURCE_ROOT; };
+		644DFE401F6682A5008B29A6 /* ProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileTableViewController.m; path = "Patissier-iOS-Objective-C/ProfileTableViewController.m"; sourceTree = SOURCE_ROOT; };
 		644DFE481F668512008B29A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92AD3DEDC0085568B6482492 /* Pods-Patissier-iOS-Objective-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Patissier-iOS-Objective-C.release.xcconfig"; path = "Pods/Target Support Files/Pods-Patissier-iOS-Objective-C/Pods-Patissier-iOS-Objective-C.release.xcconfig"; sourceTree = "<group>"; };
 		9870AD211F6679CE008430D5 /* LandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingViewController.h; sourceTree = "<group>"; };
@@ -70,6 +70,9 @@
 				644DFE3B1F6682A5008B29A6 /* ProfileSegmentedControlTableViewCell.h */,
 				644DFE3C1F6682A5008B29A6 /* ProfileSegmentedControlTableViewCell.m */,
 				644DFE3D1F6682A5008B29A6 /* ProfileSegmentedControlTableViewCell.xib */,
+				644DFE3F1F6682A5008B29A6 /* ProfileTableViewController.h */,
+				644DFE401F6682A5008B29A6 /* ProfileTableViewController.m */,
+				644DFE3E1F6682A5008B29A6 /* Profile.storyboard */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -116,9 +119,6 @@
 				9870AD1F1F667995008430D5 /* AppDelegate */,
 				9870AD201F6679A6008430D5 /* Landing */,
 				644DFE371F6682A5008B29A6 /* Profile */,
-				644DFE3E1F6682A5008B29A6 /* Profile.storyboard */,
-				644DFE3F1F6682A5008B29A6 /* ProfileTableViewController.h */,
-				644DFE401F6682A5008B29A6 /* ProfileTableViewController.m */,
 				98E15DAD1F661F0C000E1B9B /* Assets.xcassets */,
 				644DFE471F668512008B29A6 /* Main.storyboard */,
 				98E15DAF1F661F0C000E1B9B /* LaunchScreen.storyboard */,
