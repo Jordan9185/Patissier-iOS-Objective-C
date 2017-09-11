@@ -12,12 +12,18 @@
 
 @end
 
+@interface NYTSection: NSObject
+
+@property (nonatomic) NSString *headline;
+
+@end
+
 @implementation LandingViewController
 
 - (void) viewDidLoad {
     [super viewDidLoad];
     
-    
+    NSLog(@"fuck");
 }
 
 

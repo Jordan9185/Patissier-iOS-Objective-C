@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15668EBC1F66601600A26036 /* ProductCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15668EBB1F66601600A26036 /* ProductCollectionViewController.m */; };
+		15668EBF1F66603100A26036 /* ProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15668EBE1F66603100A26036 /* ProductCollectionViewCell.m */; };
+		15668EC11F66617D00A26036 /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15668EC01F66617D00A26036 /* Product.storyboard */; };
 		98E15DA31F661F0C000E1B9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E15DA21F661F0C000E1B9B /* main.m */; };
 		98E15DA61F661F0C000E1B9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E15DA51F661F0C000E1B9B /* AppDelegate.m */; };
 		98E15DAE1F661F0C000E1B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98E15DAD1F661F0C000E1B9B /* Assets.xcassets */; };
@@ -16,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15668EBA1F66601600A26036 /* ProductCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCollectionViewController.h; sourceTree = "<group>"; };
+		15668EBB1F66601600A26036 /* ProductCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCollectionViewController.m; sourceTree = "<group>"; };
+		15668EBD1F66603100A26036 /* ProductCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCollectionViewCell.h; sourceTree = "<group>"; };
+		15668EBE1F66603100A26036 /* ProductCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCollectionViewCell.m; sourceTree = "<group>"; };
+		15668EC01F66617D00A26036 /* Product.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Product.storyboard; path = ../Product.storyboard; sourceTree = "<group>"; };
 		98E15D9E1F661F0C000E1B9B /* Patissier-iOS-Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Patissier-iOS-Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E15DA21F661F0C000E1B9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		98E15DA41F661F0C000E1B9B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +47,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15668EB91F665FBD00A26036 /* ProductCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				15668EC01F66617D00A26036 /* Product.storyboard */,
+				15668EBA1F66601600A26036 /* ProductCollectionViewController.h */,
+				15668EBB1F66601600A26036 /* ProductCollectionViewController.m */,
+				15668EBD1F66603100A26036 /* ProductCollectionViewCell.h */,
+				15668EBE1F66603100A26036 /* ProductCollectionViewCell.m */,
+			);
+			name = ProductCollectionView;
+			sourceTree = "<group>";
+		};
 		98E15D951F661F0C000E1B9B = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +80,7 @@
 			children = (
 				98E15DB81F662327000E1B9B /* AppDelegate */,
 				98E15DB91F662348000E1B9B /* Landing */,
+				15668EB91F665FBD00A26036 /* ProductCollectionView */,
 				98E15DAD1F661F0C000E1B9B /* Assets.xcassets */,
 				98E15DAF1F661F0C000E1B9B /* LaunchScreen.storyboard */,
 				98E15DB21F661F0C000E1B9B /* Info.plist */,
@@ -156,6 +177,7 @@
 			files = (
 				98E15DB11F661F0C000E1B9B /* LaunchScreen.storyboard in Resources */,
 				98E15DAE1F661F0C000E1B9B /* Assets.xcassets in Resources */,
+				15668EC11F66617D00A26036 /* Product.storyboard in Resources */,
 				98E15DBF1F662597000E1B9B /* Landing.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +189,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15668EBC1F66601600A26036 /* ProductCollectionViewController.m in Sources */,
+				15668EBF1F66603100A26036 /* ProductCollectionViewCell.m in Sources */,
 				98E15DBD1F6623D3000E1B9B /* LandingViewController.m in Sources */,
 				98E15DA61F661F0C000E1B9B /* AppDelegate.m in Sources */,
 				98E15DA31F661F0C000E1B9B /* main.m in Sources */,
@@ -320,6 +344,7 @@
 				98E15DB71F661F0C000E1B9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
