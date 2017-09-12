@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ProfileContentFavoriteCollectionViewController.h"
 
-@interface ProfileTableViewController : UITableViewController
+
+@interface ProfileTableViewController : UITableViewController <UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+
+typedef enum {
+    Profile = 0,
+    Segment,
+    Content,
+    //	Leave this one last
+    TableRow_COUNT
+} TableViewComponent;
 
 @end
+
+ProfileContentFavoriteCollectionViewController *_collectionView;
