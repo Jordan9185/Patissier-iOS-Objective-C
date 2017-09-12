@@ -10,4 +10,12 @@
 
 @interface ProfileTableViewController : UITableViewController
 
+typedef enum {
+    Profile = 0,
+    Segment,
+    Content,
+    //	Leave this one last
+    TableRow_COUNT
+} TableViewComponent;
+
 @end
