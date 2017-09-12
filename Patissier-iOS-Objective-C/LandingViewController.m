@@ -20,6 +20,7 @@
     [self setUpBackgroundImageView];
     
     [self setUpBackgroundGradientView];
+    
 }
 
 - (void)setUpBackgroundImageView {
@@ -47,7 +48,7 @@
     
     gradientLayer.colors = [NSArray arrayWithObjects:(id) colorOne.CGColor, colorTwo.CGColor, nil];
     
-    gradientLayer.frame = self.GradientView.bounds;
+    gradientLayer.frame = self.view.frame;
     
     gradientLayer.startPoint = CGPointMake(0.0, 0.5);
     
