@@ -10,11 +10,10 @@
 #import "ProductCollectionViewCell.h"
 #import "Product.h"
 
-@interface ProductCollectionViewController ()
-{
-    
-    NSArray *recievedProducts;
-    
+@interface ProductCollectionViewController() {
+
+    NSMutableArray *recievedProducts;
+
 }
 
 @end
