@@ -19,9 +19,9 @@
     
 }
 
-//- (UIImage *) image {
-//    
-//    return <#expression#>
-//}
+- (UIImage *) image {
+    
+    return <#expression#>
+}
 
 @end
