@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1567863C1F677CFD00E17731 /* ProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 156786391F677CFD00E17731 /* ProductCollectionViewCell.m */; };
+		1567863D1F677CFD00E17731 /* ProductCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1567863B1F677CFD00E17731 /* ProductCollectionViewController.m */; };
+		1567863F1F677D0900E17731 /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1567863E1F677D0900E17731 /* Product.storyboard */; };
+		156786421F67801000E17731 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 156786411F67801000E17731 /* Product.m */; };
 		38FD4F6D925489D0197A1161 /* libPods-Patissier-iOS-Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 442D3CD19AB8E14ABA4F5046 /* libPods-Patissier-iOS-Objective-C.a */; };
 		644DFE411F6682A5008B29A6 /* ProfileInfomationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 644DFE391F6682A5008B29A6 /* ProfileInfomationTableViewCell.m */; };
 		644DFE421F6682A5008B29A6 /* ProfileInfomationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 644DFE3A1F6682A5008B29A6 /* ProfileInfomationTableViewCell.xib */; };
@@ -26,6 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		156786381F677CFD00E17731 /* ProductCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCollectionViewCell.h; sourceTree = "<group>"; };
+		156786391F677CFD00E17731 /* ProductCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCollectionViewCell.m; sourceTree = "<group>"; };
+		1567863A1F677CFD00E17731 /* ProductCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCollectionViewController.h; sourceTree = "<group>"; };
+		1567863B1F677CFD00E17731 /* ProductCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCollectionViewController.m; sourceTree = "<group>"; };
+		1567863E1F677D0900E17731 /* Product.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Product.storyboard; sourceTree = "<group>"; };
+		156786401F67801000E17731 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		156786411F67801000E17731 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 		442D3CD19AB8E14ABA4F5046 /* libPods-Patissier-iOS-Objective-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Patissier-iOS-Objective-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		644DFE381F6682A5008B29A6 /* ProfileInfomationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileInfomationTableViewCell.h; sourceTree = "<group>"; };
 		644DFE391F6682A5008B29A6 /* ProfileInfomationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileInfomationTableViewCell.m; sourceTree = "<group>"; };
@@ -64,6 +75,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1567862F1F677C6800E17731 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				156786381F677CFD00E17731 /* ProductCollectionViewCell.h */,
+				156786391F677CFD00E17731 /* ProductCollectionViewCell.m */,
+				1567863A1F677CFD00E17731 /* ProductCollectionViewController.h */,
+				1567863B1F677CFD00E17731 /* ProductCollectionViewController.m */,
+				156786401F67801000E17731 /* Product.h */,
+				156786411F67801000E17731 /* Product.m */,
+				1567863E1F677D0900E17731 /* Product.storyboard */,
+			);
+			name = Product;
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		644DFE371F6682A5008B29A6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +158,7 @@
 				9870AD201F6679A6008430D5 /* Landing */,
 				9870AD271F6784FC008430D5 /* TabbarController */,
 				644DFE371F6682A5008B29A6 /* Profile */,
+				1567862F1F677C6800E17731 /* Product */,
 				98E15DAD1F661F0C000E1B9B /* Assets.xcassets */,
 				644DFE471F668512008B29A6 /* Main.storyboard */,
 				98E15DAF1F661F0C000E1B9B /* LaunchScreen.storyboard */,
@@ -230,6 +257,7 @@
 			files = (
 				644DFE491F668512008B29A6 /* Main.storyboard in Resources */,
 				644DFE451F6682A5008B29A6 /* Profile.storyboard in Resources */,
+				1567863F1F677D0900E17731 /* Product.storyboard in Resources */,
 				644DFE441F6682A5008B29A6 /* ProfileSegmentedControlTableViewCell.xib in Resources */,
 				98E15DB11F661F0C000E1B9B /* LaunchScreen.storyboard in Resources */,
 				98E15DAE1F661F0C000E1B9B /* Assets.xcassets in Resources */,
@@ -294,12 +322,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				98E15DBD1F6623D3000E1B9B /* (null) in Sources */,
+				156786421F67801000E17731 /* Product.m in Sources */,
 				98E15DA61F661F0C000E1B9B /* AppDelegate.m in Sources */,
 				9870AD241F6679CE008430D5 /* LandingViewController.m in Sources */,
 				644DFE461F6682A5008B29A6 /* ProfileTableViewController.m in Sources */,
+				1567863D1F677CFD00E17731 /* ProductCollectionViewController.m in Sources */,
 				98E15DA31F661F0C000E1B9B /* main.m in Sources */,
 				9870AD2A1F6785B0008430D5 /* TabbarController.m in Sources */,
 				644DFE431F6682A5008B29A6 /* ProfileSegmentedControlTableViewCell.m in Sources */,
+				1567863C1F677CFD00E17731 /* ProductCollectionViewCell.m in Sources */,
 				644DFE411F6682A5008B29A6 /* ProfileInfomationTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
