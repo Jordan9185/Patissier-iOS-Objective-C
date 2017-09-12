@@ -10,6 +10,7 @@
 		1567863C1F677CFD00E17731 /* ProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 156786391F677CFD00E17731 /* ProductCollectionViewCell.m */; };
 		1567863D1F677CFD00E17731 /* ProductCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1567863B1F677CFD00E17731 /* ProductCollectionViewController.m */; };
 		1567863F1F677D0900E17731 /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1567863E1F677D0900E17731 /* Product.storyboard */; };
+		156786421F67801000E17731 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 156786411F67801000E17731 /* Product.m */; };
 		38FD4F6D925489D0197A1161 /* libPods-Patissier-iOS-Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 442D3CD19AB8E14ABA4F5046 /* libPods-Patissier-iOS-Objective-C.a */; };
 		644DFE411F6682A5008B29A6 /* ProfileInfomationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 644DFE391F6682A5008B29A6 /* ProfileInfomationTableViewCell.m */; };
 		644DFE421F6682A5008B29A6 /* ProfileInfomationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 644DFE3A1F6682A5008B29A6 /* ProfileInfomationTableViewCell.xib */; };
@@ -33,6 +34,8 @@
 		1567863A1F677CFD00E17731 /* ProductCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCollectionViewController.h; sourceTree = "<group>"; };
 		1567863B1F677CFD00E17731 /* ProductCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCollectionViewController.m; sourceTree = "<group>"; };
 		1567863E1F677D0900E17731 /* Product.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Product.storyboard; sourceTree = "<group>"; };
+		156786401F67801000E17731 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		156786411F67801000E17731 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 		442D3CD19AB8E14ABA4F5046 /* libPods-Patissier-iOS-Objective-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Patissier-iOS-Objective-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		644DFE381F6682A5008B29A6 /* ProfileInfomationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileInfomationTableViewCell.h; sourceTree = "<group>"; };
 		644DFE391F6682A5008B29A6 /* ProfileInfomationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileInfomationTableViewCell.m; sourceTree = "<group>"; };
@@ -76,6 +79,8 @@
 				156786391F677CFD00E17731 /* ProductCollectionViewCell.m */,
 				1567863A1F677CFD00E17731 /* ProductCollectionViewController.h */,
 				1567863B1F677CFD00E17731 /* ProductCollectionViewController.m */,
+				156786401F67801000E17731 /* Product.h */,
+				156786411F67801000E17731 /* Product.m */,
 				1567863E1F677D0900E17731 /* Product.storyboard */,
 			);
 			name = Product;
@@ -304,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98E15DBD1F6623D3000E1B9B /* (null) in Sources */,
+				156786421F67801000E17731 /* Product.m in Sources */,
 				98E15DA61F661F0C000E1B9B /* AppDelegate.m in Sources */,
 				9870AD241F6679CE008430D5 /* LandingViewController.m in Sources */,
 				644DFE461F6682A5008B29A6 /* ProfileTableViewController.m in Sources */,
