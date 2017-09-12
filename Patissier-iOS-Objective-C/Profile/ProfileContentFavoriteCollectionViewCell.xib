@@ -19,15 +19,21 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrC-Mn-OWy">
-                        <rect key="frame" x="109.5" y="96" width="21" height="21"/>
+                        <rect key="frame" x="109.5" y="86" width="21" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="1AL-B0-WEw"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
+            <color key="backgroundColor" red="0.25490196079999999" green="0.45882352939999999" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="JrC-Mn-OWy" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="B1Z-mD-3pg"/>
+                <constraint firstItem="JrC-Mn-OWy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="86" id="T1n-ss-cud"/>
+                <constraint firstAttribute="bottom" secondItem="JrC-Mn-OWy" secondAttribute="bottom" constant="86" id="oBm-Wh-xeZ"/>
                 <constraint firstItem="JrC-Mn-OWy" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="yYO-hW-WdF"/>
             </constraints>
             <size key="customSize" width="241" height="212"/>

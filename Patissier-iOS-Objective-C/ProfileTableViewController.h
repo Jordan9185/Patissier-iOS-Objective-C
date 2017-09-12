@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ProfileContentFavoriteCollectionViewController.h"
 
-@interface ProfileTableViewController : UITableViewController
+
+@interface ProfileTableViewController : UITableViewController <UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 typedef enum {
     Profile = 0,
@@ -19,3 +21,5 @@ typedef enum {
 } TableViewComponent;
 
 @end
+
+ProfileContentFavoriteCollectionViewController *_collectionView;

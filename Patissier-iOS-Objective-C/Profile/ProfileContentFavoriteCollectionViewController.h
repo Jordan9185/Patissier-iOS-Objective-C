@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ProfileContentFavoriteCollectionViewController : UICollectionViewController
+@property (strong, nonatomic) IBOutlet UICollectionView *myCollectionView;
 
 @end

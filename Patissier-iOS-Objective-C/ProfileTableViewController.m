@@ -10,6 +10,9 @@
 #import "ProfileInfomationTableViewCell.h"
 #import "ProfileSegmentedControlTableViewCell.h"
 #import "ProfileContentFavoriteTableViewCell.h"
+#import "ProfileContentFavoriteCollectionViewController.h"
+#import "ProfileContentFavoriteCollectionViewCell.h"
+#import "ProductFavoriteTableViewCell.h"
 
 @interface ProfileTableViewController ()
 
@@ -24,6 +27,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.tableView.scrollEnabled = NO;
+    
     UINib *cellNib = [UINib nibWithNibName:@"ProfileInfomationTableViewCell" bundle:nil];
 
     [self.tableView registerNib:cellNib forCellReuseIdentifier:@"ProfileInfomationTableViewCell"];
@@ -36,7 +41,7 @@
     
     [self.tableView registerNib:cellNib3 forCellReuseIdentifier:@"ProfileContentFavoriteTableViewCell"];
 
-    self.favoriteSegmentClicked = NO;
+    self.favoriteSegmentClicked = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,12 +75,22 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return UITableViewAutomaticDimension;
+    switch (indexPath.section) {
+        case Profile:
+            return UITableViewAutomaticDimension;
+            
+        case Segment:
+            return UITableViewAutomaticDimension;
+            
+        case Content:
+            return 500;
+    }
+    return 150;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 44.0;
+    return 500;
 }
 
 
@@ -104,46 +119,18 @@
     
     else {
         
-        ProfileContentFavoriteTableViewCell *cell1 = [tableView dequeueReusableCellWithIdentifier:@"ProfileContentFavoriteTableViewCell" forIndexPath:indexPath];
+//        ProfileSegmentedControlTableViewCell *cell1 = [tableView dequeueReusableCellWithIdentifier:@"ProfileSegmentedControlTableViewCell" forIndexPath:indexPath];
         
-        ProfileSegmentedControlTableViewCell *cell2 = [tableView dequeueReusableCellWithIdentifier:@"ProfileSegmentedControlTableViewCell" forIndexPath:indexPath];
+        ProductFavoriteTableViewCell *favoriteCell = [tableView dequeueReusableCellWithIdentifier:@"ProductFavoriteTableViewCell" forIndexPath:indexPath];
         
         if (self.favoriteSegmentClicked == YES) {
-            return cell1;
+            return favoriteCell;
 
         } else {
-            return cell2;
+            return favoriteCell;
         }
         
     }
-    
-    
-//    ProfileInfomationTableViewCell *profilecell = [tableView dequeueReusableCellWithIdentifier:@"ProfileInfomationTableViewCell" forIndexPath:indexPath];
-//    
-//    profilecell.name.text = @"James";
-//
-//    
-//    ProfileSegmentedControlTableViewCell *segmentcell = [tableView dequeueReusableCellWithIdentifier:@"ProfileSegmentedControlTableViewCell" forIndexPath:indexPath];
-//    
-//    segmentcell.favoriteButton.backgroundColor = [UIColor clearColor];
-//    
-//    
-//    switch (indexPath.section) {
-//        case Profile:
-//            
-//            return profilecell;
-//            
-//        case Segment:
-//            
-//            return segmentcell;
-//            
-//        case Content:
-//            return segmentcell;
-//            
-//    }
-//    
-//    return profilecell;
-
 
 }
 
