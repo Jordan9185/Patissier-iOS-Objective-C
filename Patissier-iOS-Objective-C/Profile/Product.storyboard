@@ -106,7 +106,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Xhf-R2-IBs">
             <objects>
-                <navigationController storyboardIdentifier="ProductCollectionViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Hgh-0I-eDK" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="productNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Hgh-0I-eDK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="a4w-78-mvr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
