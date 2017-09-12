@@ -26,7 +26,7 @@ static NSString * const reuseIdentifier = @"ProductCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //recievedProducts = @[@"a", @"b", @"c"];
+    recievedProducts = @[@"a", @"b", @"c"];
 
     Product *product = [[Product alloc] init];
     product.identifier = @"123";

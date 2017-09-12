@@ -7,6 +7,8 @@
 //
 
 #import "TabbarController.h"
+#import "ProductCollectionViewController.h"
+#import "ProfileTableViewController.h"
 
 @interface TabbarController ()
 
@@ -15,13 +17,39 @@
 @implementation TabbarController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self setUpTabBar];
+    
+    UIStoryboard *productStoryBoard = [UIStoryboard storyboardWithName:@"Product" bundle:nil];
+    
+    UIStoryboard *profileStoryBoard = [UIStoryboard storyboardWithName:@"Profile" bundle:nil];
+    
+    ProductCollectionViewController *productCollectionViewController = [productStoryBoard instantiateViewControllerWithIdentifier:@"ProductCollectionViewController"];
+    
+    ProfileTableViewController *profileTableViewController = [profileStoryBoard instantiateViewControllerWithIdentifier:@"ProfileTableViewController"];
+    
+    NSArray *childViewControllers = [NSArray arrayWithObjects:
+                                     productCollectionViewController,
+                                     profileTableViewController,
+                                     nil];
+    
+    self.viewControllers = childViewControllers;
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void) setUpTabBar {
+    
+    self.tabBar.barStyle = UIBarStyleDefault;
+    
+    self.tabBar.translucent = false;
+    
+    self.tabBar.tintColor = [UIColor
+                             colorWithRed: 53.0 / 255.0
+                             green: 184.0 / 255.0
+                             blue: 208.0 / 255.0
+                             alpha: 1.0 ];
 }
 
 @end
