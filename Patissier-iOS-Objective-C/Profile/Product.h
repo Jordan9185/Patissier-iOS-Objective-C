@@ -19,26 +19,6 @@
 
 - (NSURL *) imageURL;
 
-- (UIImage *) image;
+//- (UIImage *) image;
 
 @end
-
-/*
-struct Product {
-    
-    // MARK: Property
-    
-    let id: ProductId
-    
-    let name: String
-    
-    let price: Double
-    
-    var previewImageURL: URL {
-        
-        let urlString = "http://52.198.40.72/patissier/products/\(id.rawValue)/preview.jpg"
-        
-        return URL(string: urlString)!
-        
-    }
-*/

@@ -8,20 +8,21 @@
 
 #import "Product.h"
 #import <UIKit/UIKit.h>
+//#import <SDWebImage/UIImageView+WebCache.h>
 
 @implementation Product
 
 - (NSURL *) imageURL {
-    
+
     NSString *urlString = [NSString stringWithFormat: @"http://52.198.40.72/patissier/products/%@/preview.jpg", self.identifier];
-    
+
     return [NSURL URLWithString: urlString];
-    
+
 }
 
-- (UIImage *) image {
-    
-    return <#expression#>
-}
+//- (UIImage *) image {
+//    
+//    return <#expression#>
+//}
 
 @end
