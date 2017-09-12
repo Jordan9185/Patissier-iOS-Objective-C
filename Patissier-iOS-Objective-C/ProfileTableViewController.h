@@ -21,5 +21,3 @@ typedef enum {
 } TableViewComponent;
 
 @end
-
-ProfileContentFavoriteCollectionViewController *_collectionView;
