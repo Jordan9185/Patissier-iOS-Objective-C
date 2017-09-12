@@ -10,8 +10,5 @@ target 'Patissier-iOS-Objective-C' do
 	pod "FBSDKLoginKit";
 	pod "FBSDKShareKit";
 	pod "FBSDKMessengerShareKit";
-<<<<<<< HEAD
-=======
-	pod "SDWebImage/WebP"
->>>>>>> sdwebimage
+	pod "SDWebImage
 end
