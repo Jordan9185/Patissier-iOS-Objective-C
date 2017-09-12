@@ -58,4 +58,23 @@
     
 }
 
+- (IBAction)signInWithFacebook:(id)sender {
+    
+    FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+    
+    [login
+     logInWithReadPermissions:@[@"public_profile",@"email"]
+     fromViewController:self
+     handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+         if (error) {
+             NSLog(@"Process error");
+         } else if (result.isCancelled) {
+             NSLog(@"Cancelled");
+         } else {
+             NSLog(@"Logged in");
+         }
+     }];
+
+}
+
 @end
