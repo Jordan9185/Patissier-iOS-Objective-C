@@ -1,13 +1,13 @@
 //
-//  LandingViewController.h
+//  TabbarController.h
 //  Patissier-iOS-Objective-C
 //
-//  Created by JordanLin on 2017/9/11.
+//  Created by JordanLin on 2017/9/12.
 //  Copyright © 2017年 JordanLin. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface LandingViewController : UIViewController
+@interface TabbarController : UITabBarController
 
 @end

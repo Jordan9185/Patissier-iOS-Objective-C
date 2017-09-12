@@ -7,6 +7,8 @@
 //
 
 #import "LandingViewController.h"
+#import "TabbarController.h"
+#import "AppDelegate.h"
 
 @interface LandingViewController ()
 
@@ -20,6 +22,7 @@
     [self setUpBackgroundImageView];
     
     [self setUpBackgroundGradientView];
+    
 }
 
 - (void)setUpBackgroundImageView {
@@ -47,7 +50,7 @@
     
     gradientLayer.colors = [NSArray arrayWithObjects:(id) colorOne.CGColor, colorTwo.CGColor, nil];
     
-    gradientLayer.frame = self.GradientView.bounds;
+    gradientLayer.frame = self.view.frame;
     
     gradientLayer.startPoint = CGPointMake(0.0, 0.5);
     
@@ -55,6 +58,39 @@
     
     [self.GradientView.layer insertSublayer: gradientLayer atIndex: 0];
     
+}
+
+- (IBAction)signInWithFacebook:(id)sender {
+    
+    FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+    
+    [login
+     logInWithReadPermissions:@[@"public_profile",@"email"]
+     fromViewController:self
+     handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+         
+         if (error) {
+             
+             NSLog(@"Process error");
+             
+         } else if (result.isCancelled) {
+             
+             NSLog(@"Cancelled");
+             
+         } else {
+             
+             NSLog(@"Logged in");
+             
+             NSLog(@"%@", result.token);
+            
+             TabbarController *tabBarController = [TabbarController alloc];
+             
+             AppDelegate.sharedAppDelegate.window.rootViewController = tabBarController;
+             
+         }
+         
+     }];
+
 }
 
 @end
