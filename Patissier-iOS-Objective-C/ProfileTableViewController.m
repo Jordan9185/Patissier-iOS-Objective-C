@@ -12,6 +12,7 @@
 #import "ProfileContentFavoriteTableViewCell.h"
 #import "ProfileContentFavoriteCollectionViewController.h"
 #import "ProfileContentFavoriteCollectionViewCell.h"
+#import "ProfilePurchaseTableViewCell.h"
 #import "ProductFavoriteTableViewCell.h"
 
 @interface ProfileTableViewController ()
@@ -119,19 +120,20 @@
     
     else {
         
-//        ProfileSegmentedControlTableViewCell *cell1 = [tableView dequeueReusableCellWithIdentifier:@"ProfileSegmentedControlTableViewCell" forIndexPath:indexPath];
-        
-        ProductFavoriteTableViewCell *favoriteCell = [tableView dequeueReusableCellWithIdentifier:@"ProductFavoriteTableViewCell" forIndexPath:indexPath];
-        
         if (self.favoriteSegmentClicked == YES) {
+            
+            ProductFavoriteTableViewCell *favoriteCell = [tableView dequeueReusableCellWithIdentifier:@"ProductFavoriteTableViewCell" forIndexPath:indexPath];
+            
             return favoriteCell;
-
+            
         } else {
-            return favoriteCell;
+            
+            ProfilePurchaseTableViewCell *purchaseCell = [tableView dequeueReusableCellWithIdentifier:@"ProfilePurchaseTableViewCell" forIndexPath:indexPath];
+            return purchaseCell;
         }
         
     }
-
+    
 }
 
 -(void)segmentClicked:(UIButton*)sender
