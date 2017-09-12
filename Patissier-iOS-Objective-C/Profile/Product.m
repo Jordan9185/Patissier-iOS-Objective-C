@@ -8,7 +8,7 @@
 
 #import "Product.h"
 #import <UIKit/UIKit.h>
-//#import <SDWebImage/UIImageView+WebCache.h>
+
 
 @implementation Product
 
@@ -19,10 +19,5 @@
     return [NSURL URLWithString: urlString];
 
 }
-
-//- (UIImage *) image {
-//    
-//    return <#expression#>
-//}
 
 @end

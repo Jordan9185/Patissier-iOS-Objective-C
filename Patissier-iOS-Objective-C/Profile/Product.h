@@ -15,10 +15,8 @@
 
 @property NSString *name;
 
-@property NSString *price;
+@property NSInteger price;
 
 - (NSURL *) imageURL;
-
-//- (UIImage *) image;
 
 @end
