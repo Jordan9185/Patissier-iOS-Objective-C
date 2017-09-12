@@ -7,6 +7,9 @@
 //
 
 #import "LandingViewController.h"
+#import "TabbarController.h"
+#import "ProfileTableViewController.h"
+#import "AppDelegate.h"
 
 @interface LandingViewController ()
 
@@ -66,13 +69,33 @@
      logInWithReadPermissions:@[@"public_profile",@"email"]
      fromViewController:self
      handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+         
          if (error) {
+             
              NSLog(@"Process error");
+             
          } else if (result.isCancelled) {
+             
              NSLog(@"Cancelled");
+             
          } else {
+             
              NSLog(@"Logged in");
+             
+             NSLog(@"%@", result.token);
+            
+             TabbarController *tabBarController = [TabbarController alloc];
+             
+             UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Profile" bundle:nil];
+             
+             ProfileTableViewController *profileTableViewController = [storyBoard instantiateViewControllerWithIdentifier:@"ProfileTableViewController"];
+             
+             [tabBarController addChildViewController: profileTableViewController];
+             
+             AppDelegate.sharedAppDelegate.window.rootViewController = profileTableViewController;
+             
          }
+         
      }];
 
 }

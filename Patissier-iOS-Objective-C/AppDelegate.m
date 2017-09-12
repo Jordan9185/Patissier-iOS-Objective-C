@@ -15,6 +15,9 @@
 
 @implementation AppDelegate
 
++ (AppDelegate *) sharedAppDelegate {
+    return (AppDelegate *)[UIApplication sharedApplication].delegate;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[FBSDKApplicationDelegate sharedInstance] application:application
