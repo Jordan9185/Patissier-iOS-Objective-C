@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,33 +29,34 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="312.5"/>
                                             <color key="backgroundColor" red="0.2823529541" green="0.59607845540000004" blue="0.58431375029999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NWQ-KV-IXQ">
-                                                <size key="itemSize" width="195" height="177"/>
+                                                <size key="itemSize" width="155" height="160"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProfileContentFavoriteCollectionViewCell" id="CFz-Pi-PSu" customClass="ProfileContentFavoriteCollectionViewCell">
-                                                    <rect key="frame" x="90" y="0.0" width="195" height="177"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="155" height="160"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                        <rect key="frame" x="0.0" y="0.0" width="195" height="177"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="155" height="160"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvO-T1-hJA">
-                                                                <rect key="frame" x="76" y="78" width="42" height="21"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wv6-TV-gcL">
+                                                                <rect key="frame" x="0.0" y="0.0" width="155" height="160"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="160" id="S9h-UF-3Yz"/>
+                                                                </constraints>
+                                                            </view>
                                                         </subviews>
                                                     </view>
                                                     <color key="backgroundColor" red="0.75536674260000003" green="0.79898995159999997" blue="0.86554056410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottomMargin" secondItem="jvO-T1-hJA" secondAttribute="bottom" constant="70" id="2Ot-Em-rDF"/>
-                                                        <constraint firstItem="jvO-T1-hJA" firstAttribute="centerX" secondItem="CFz-Pi-PSu" secondAttribute="centerX" id="AZm-Ar-7wj"/>
-                                                        <constraint firstItem="jvO-T1-hJA" firstAttribute="centerY" secondItem="CFz-Pi-PSu" secondAttribute="centerY" id="OnT-zK-BeL"/>
-                                                        <constraint firstItem="jvO-T1-hJA" firstAttribute="top" secondItem="CFz-Pi-PSu" secondAttribute="topMargin" constant="70" id="RpF-LM-hUm"/>
+                                                        <constraint firstItem="wv6-TV-gcL" firstAttribute="top" secondItem="CFz-Pi-PSu" secondAttribute="top" id="HpW-HL-ZRv"/>
+                                                        <constraint firstAttribute="trailing" secondItem="wv6-TV-gcL" secondAttribute="trailing" id="evh-7M-Ei6"/>
+                                                        <constraint firstItem="wv6-TV-gcL" firstAttribute="leading" secondItem="CFz-Pi-PSu" secondAttribute="leading" id="rYE-UE-v2v"/>
+                                                        <constraint firstAttribute="bottom" secondItem="wv6-TV-gcL" secondAttribute="bottom" id="vkl-K3-slE"/>
                                                     </constraints>
                                                 </collectionViewCell>
                                             </cells>
