@@ -134,11 +134,9 @@
 
 -(void)saveJsonWebTokenToUserDefault: (NSString*) jsonWebToken {
     
-    NSUserDefaults *defaults = NSUserDefaults.standardUserDefaults;
+    [[NSUserDefaults standardUserDefaults] setObject: jsonWebToken forKey:@"jsonWebToken"];
     
-    [defaults setValue: jsonWebToken forKey:@"jsonWebToken"];
-    
-    [defaults synchronize];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     
 }
 

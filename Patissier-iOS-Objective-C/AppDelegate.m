@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import "TabbarController.h"
+#import "LandingViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,6 +24,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
+    
+    NSString *jsonWebToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"jsonWebToken"];
+    
+    if (jsonWebToken != nil) {
+        
+        AppDelegate.sharedAppDelegate.window.rootViewController = [TabbarController alloc];
+        
+    } else {
+        
+        AppDelegate.sharedAppDelegate.window.rootViewController = [self setUpLandingNavigationController];
+        
+    }
+    
     return YES;
 }
 
@@ -59,6 +74,21 @@
                                                           openURL:url
                                                 sourceApplication:sourceApplication
                                                        annotation:annotation];
+}
+
+-(UINavigationController *)setUpLandingNavigationController {
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard
+                                       storyboardWithName:@"Main"
+                                       bundle:nil];
+    
+    UINavigationController *landingNavigationController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"landingNavigationController"];
+    
+    LandingViewController *landingViewController = [LandingViewController alloc];
+    
+    [landingNavigationController.childViewControllers arrayByAddingObject: landingViewController];
+    
+    return landingNavigationController;
 }
 
 @end
