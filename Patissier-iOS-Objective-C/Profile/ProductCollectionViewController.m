@@ -16,9 +16,8 @@
     Product *recievedProduct1;
     Product *recievedProduct2;
     
-    //NSArray *recievedProducts;
-
     NSArray<__kindof Product *> *recievedProducts;
+
 }
 
 @end
@@ -45,9 +44,10 @@ static NSString * const reuseIdentifier = @"ProductCell";
     NSNumber *test = @1;
     
     recievedProducts = [NSArray arrayWithObjects:
-                        recievedProduct1,
-                      recievedProduct2,
-                     test, nil
+                            recievedProduct1,
+                            recievedProduct2,
+                            test,
+                            nil
                       ];
 }
 
@@ -64,14 +64,22 @@ static NSString * const reuseIdentifier = @"ProductCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ProductCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    Product *product = [recievedProducts objectAtIndex:indexPath.row];
+//    Product *product = [recievedProducts objectAtIndex:indexPath.row];
+    
+    id receivedProduct = [recievedProducts objectAtIndex: indexPath.row];
+    
     //Product *productTest =  [[recievedProducts objectAtIndex:indexPath.row] name];
     //productTest.name = @"123";
     
-    if ([product isKindOfClass:[Product class]]) {
+    if ([receivedProduct isKindOfClass:[Product class]]) {
         
-       cell.productNameLabel.text = product.name;
+        Product *product = (Product *)receivedProduct;
+        
+        cell.productNameLabel.text = product.name;
+        
         cell.productPriceLabel.text = [NSString stringWithFormat:@"%ld", (long)product.price];
+        
+        [cell.productImageView sd_setImageWithURL: product.imageURL];
         
     }
     
