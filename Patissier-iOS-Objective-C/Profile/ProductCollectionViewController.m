@@ -49,7 +49,6 @@ static NSString * const reuseIdentifier = @"ProductCell";
                             test,
                             nil
                       ];
-}
 
 //    Take "jsonWebToken" in NSUserDefaults.
 //
