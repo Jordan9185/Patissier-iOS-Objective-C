@@ -10,4 +10,6 @@ target 'Patissier-iOS-Objective-C' do
 	pod "FBSDKLoginKit";
 	pod "FBSDKShareKit";
 	pod "FBSDKMessengerShareKit";
+	pod "SDWebImage";
+	pod "AFNetworking";
 end

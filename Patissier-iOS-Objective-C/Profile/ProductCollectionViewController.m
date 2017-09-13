@@ -8,13 +8,16 @@
 
 #import "ProductCollectionViewController.h"
 #import "ProductCollectionViewCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "Product.h"
 
-@interface ProductCollectionViewController ()
-{
+@interface ProductCollectionViewController() {
     
-    NSArray *recievedProducts;
+    Product *recievedProduct1;
+    Product *recievedProduct2;
     
+    NSArray<__kindof Product *> *recievedProducts;
+
 }
 
 @end
@@ -25,7 +28,28 @@ static NSString * const reuseIdentifier = @"ProductCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    //recievedProducts = @[@"a", @"b", @"c"];
     
+    recievedProduct1 = [[Product alloc] init];
+    recievedProduct1.identifier = @"5947974173a7f08ded3e8269";
+    recievedProduct1.name = @"巧克力杯子蛋糕";
+    recievedProduct1.price = 120;
+    
+    recievedProduct2 = [[Product alloc] init];
+    recievedProduct2.name = @"yeahi";
+    recievedProduct2.identifier = @"5947974473a7f08ded3e826a";
+    recievedProduct2.price = 75;
+    
+    NSNumber *test = @1;
+    
+    recievedProducts = [NSArray arrayWithObjects:
+                            recievedProduct1,
+                            recievedProduct2,
+                            test,
+                            nil
+                      ];
+
 //    Take "jsonWebToken" in NSUserDefaults.
 //
 //    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -33,67 +57,56 @@ static NSString * const reuseIdentifier = @"ProductCell";
 //    NSString *jsonWebToken = [defaults valueForKey:@"jsonWebToken"];
 //    
 //    NSLog(@"test: %@", jsonWebToken);
-    
-    recievedProducts = @[@"a", @"b", @"c"];
-
-    Product *product = [[Product alloc] init];
-    product.identifier = @"123";
-    
-    NSLog(@"%@", product.imageURL);
 
 }
 
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
+
     return recievedProducts.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ProductCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    // Configure the cell
-    cell.productNameLabel.text = [recievedProducts objectAtIndex:indexPath.row];
+//    Product *product = [recievedProducts objectAtIndex:indexPath.row];
+    
+    id receivedProduct = [recievedProducts objectAtIndex: indexPath.row];
+    
+    //Product *productTest =  [[recievedProducts objectAtIndex:indexPath.row] name];
+    //productTest.name = @"123";
+    
+    if ([receivedProduct isKindOfClass:[Product class]]) {
+        
+        Product *product = (Product *)receivedProduct;
+        
+        cell.productNameLabel.text = product.name;
+        
+        cell.productPriceLabel.text = [NSString stringWithFormat:@"%ld", (long)product.price];
+        
+        [cell.productImageView sd_setImageWithURL: product.imageURL];
+        
+    }
+    
+    
+//    Product *product = (Product *)[recievedProducts objectAtIndex:indexPath.row];
+//    
+//    if (product.name != nil) {
+//        cell.productNameLabel.text = product.name;
+//    }
+
+//    NSString *productPrice = [[recievedProducts objectAtIndex:indexPath.row] price];
+//    [cell.productPriceLabel text: [recievedProducts objectAtIndex:indexPath.row] price];
+    
+    //[cell.productImageView sd_setImageWithURL: [recievedProducts objectAtIndex:indexPath.row]];
     
     return cell;
 }
-
-#pragma mark <UICollectionViewDelegate>
-
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end
