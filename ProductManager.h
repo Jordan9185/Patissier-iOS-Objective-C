@@ -9,8 +9,16 @@
 #import <Foundation/Foundation.h>
 #import <AFNetworking.h>
 
+@protocol ProductDelegate <NSObject>
+
+-(void)didGet: (NSMutableArray *)products;
+
+@end
+
 @interface ProductManager : NSObject
 
+@property (weak, nonatomic) id<ProductDelegate> delegate;
 -(void)fetchProducts;
+
 
 @end

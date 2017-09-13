@@ -7,10 +7,17 @@
 //
 
 #import "ProductManager.h"
+#import "Product.h"
 
 @implementation ProductManager
 
+
+
 - (void)fetchProducts {
+    
+    Product *product = [[Product alloc] init];
+    
+    NSMutableArray *products = [[NSMutableArray alloc] init];
     
     NSString *productURLString = @"http://52.198.40.72/patissier/api/v1/products";
     
@@ -30,8 +37,6 @@
     
     NSString *bearerToken = [NSString stringWithFormat:@"Bearer %@", jsonWebToken];
     
-    NSLog(bearerToken);
-    
     [request setValue: bearerToken forHTTPHeaderField: @"Authorization"];
     
     NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest: request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
@@ -41,7 +46,24 @@
             return ;
         }
         
-        NSLog(@" %@", responseObject);
+        //NSLog(@"%@", responseObject[@"data"]);
+
+        for (NSMutableDictionary *productInDict in responseObject[@"data"]) {
+            product.identifier = productInDict[@"id"];
+            product.name = productInDict[@"name"];
+            product.price = NSInteger productInDict[@"price"];
+            
+            double qq = productInDict[@"price"];
+            
+            product.price = qq;
+            
+            
+            
+            [products addObject: product];
+            
+        }
+        
+        [self.delegate didGet:products];
         
     }];
     

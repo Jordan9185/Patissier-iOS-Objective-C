@@ -17,7 +17,7 @@
     Product *recievedProduct1;
     Product *recievedProduct2;
     
-    NSArray<__kindof Product *> *recievedProducts;
+    NSArray<__kindof Product *> *receivedProducts;
     
 }
 
@@ -25,14 +25,14 @@
 
 @implementation ProductCollectionViewController
 
+ProductManager *productManager;
+
 static NSString * const reuseIdentifier = @"ProductCell";
-
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    //recievedProducts = @[@"a", @"b", @"c"];
+    
+    productManager = [ProductManager alloc];
     
     recievedProduct1 = [[Product alloc] init];
     recievedProduct1.identifier = @"5947974173a7f08ded3e8269";
@@ -44,25 +44,19 @@ static NSString * const reuseIdentifier = @"ProductCell";
     recievedProduct2.identifier = @"5947974473a7f08ded3e826a";
     recievedProduct2.price = 75;
     
-    NSNumber *test = @1;
+    productManager.delegate = self;
     
-    recievedProducts = [NSArray arrayWithObjects:
-                            recievedProduct1,
-                            recievedProduct2,
-                            test,
-                            nil
-                      ];
-    ProductManager* productManager = [[ProductManager alloc] init];
     [productManager fetchProducts];
 
-//    Take "jsonWebToken" in NSUserDefaults.
-//
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    
-//    NSString *jsonWebToken = [defaults valueForKey:@"jsonWebToken"];
-//    
-//    NSLog(@"test: %@", jsonWebToken);
+}
 
+-(void)didGet:(NSMutableArray *)products {
+    
+    receivedProducts = products;
+    
+    [self.collectionView reloadData];
+    
+    NSLog(@"%@", receivedProducts);
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -71,21 +65,15 @@ static NSString * const reuseIdentifier = @"ProductCell";
     return 1;
 }
 
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 
-    return recievedProducts.count;
+    return receivedProducts.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ProductCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-//    Product *product = [recievedProducts objectAtIndex:indexPath.row];
-    
-    id receivedProduct = [recievedProducts objectAtIndex: indexPath.row];
-    
-    //Product *productTest =  [[recievedProducts objectAtIndex:indexPath.row] name];
-    //productTest.name = @"123";
+
+    id receivedProduct = [receivedProducts objectAtIndex: indexPath.row];
     
     if ([receivedProduct isKindOfClass:[Product class]]) {
         
@@ -98,19 +86,7 @@ static NSString * const reuseIdentifier = @"ProductCell";
         [cell.productImageView sd_setImageWithURL: product.imageURL];
         
     }
-    
-    
-//    Product *product = (Product *)[recievedProducts objectAtIndex:indexPath.row];
-//    
-//    if (product.name != nil) {
-//        cell.productNameLabel.text = product.name;
-//    }
 
-//    NSString *productPrice = [[recievedProducts objectAtIndex:indexPath.row] price];
-//    [cell.productPriceLabel text: [recievedProducts objectAtIndex:indexPath.row] price];
-    
-    //[cell.productImageView sd_setImageWithURL: [recievedProducts objectAtIndex:indexPath.row]];
-    
     return cell;
 }
 
