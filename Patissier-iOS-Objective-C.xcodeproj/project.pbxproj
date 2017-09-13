@@ -117,7 +117,6 @@
 		644DFE371F6682A5008B29A6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				644DFE3E1F6682A5008B29A6 /* Profile.storyboard */,
 				644DFE3F1F6682A5008B29A6 /* ProfileTableViewController.h */,
 				644DFE401F6682A5008B29A6 /* ProfileTableViewController.m */,
 				644DFE381F6682A5008B29A6 /* ProfileInfomationTableViewCell.h */,
@@ -135,6 +134,7 @@
 				644DFE5E1F67E9D0008B29A6 /* ProfilePurchaseTableViewCell.m */,
 				644DFE601F67EAD6008B29A6 /* PurchasedProductTableViewCell.h */,
 				644DFE611F67EAD6008B29A6 /* PurchasedProductTableViewCell.m */,
+				644DFE3E1F6682A5008B29A6 /* Profile.storyboard */,
 				644DFE541F67BC40008B29A6 /* Content */,
 			);
 			path = Profile;

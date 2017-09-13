@@ -26,6 +26,14 @@ static NSString * const reuseIdentifier = @"ProductCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    Take "jsonWebToken" in NSUserDefaults.
+//
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    
+//    NSString *jsonWebToken = [defaults valueForKey:@"jsonWebToken"];
+//    
+//    NSLog(@"test: %@", jsonWebToken);
+    
     recievedProducts = @[@"a", @"b", @"c"];
 
     Product *product = [[Product alloc] init];
