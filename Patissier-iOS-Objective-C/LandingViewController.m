@@ -9,6 +9,7 @@
 #import "LandingViewController.h"
 #import "TabbarController.h"
 #import "AppDelegate.h"
+#import "AFNetworking.h"
 
 @interface LandingViewController ()
 
@@ -96,37 +97,31 @@
     NSURL *url = [[NSURL alloc] initWithString: urlString];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    
-    [request setHTTPMethod: @"POST"];
-    
-    [request setValue: @"application/json" forHTTPHeaderField: @"Content-Type"];
-    
+
     NSError *error;
     
     NSDictionary *dictionary = @{ @"access_token" : facebookToken };
     
     NSData *data = [NSJSONSerialization dataWithJSONObject: dictionary options:0 error: &error];
+ 
+    [request setHTTPMethod: @"POST"];
+    
+    [request setValue: @"application/json" forHTTPHeaderField: @"Content-Type"];
     
     [request setHTTPBody: data];
     
-    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionConfiguration * configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     
-    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    
+    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         
-        if (error != nil) {
-            return;
-        }
+        NSString *jsonWebToken = responseObject[@"data"][@"token"];
         
-        NSError *jsonError;
-        
-        NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error: &jsonError];
-        
-        NSString *jsonWebToken = jsonDictionary[@"data"][@"token"];
-       
         [self saveJsonWebTokenToUserDefault: jsonWebToken];
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            
+        
             [self updateRootViewController];
             
         });
@@ -134,6 +129,7 @@
     }];
     
     [dataTask resume];
+    
 }
 
 -(void)saveJsonWebTokenToUserDefault: (NSString*) jsonWebToken {
