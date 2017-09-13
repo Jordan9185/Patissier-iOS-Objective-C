@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserManager.h"
 
-@interface ProfileInfomationTableViewCell : UITableViewCell
+@interface ProfileInfomationTableViewCell : UITableViewCell <UserManagerDelegate>
+
+@property (strong , nonatomic) UserManager *manager;
+
 @property (weak, nonatomic) IBOutlet UIImageView *image;
+
 @property (weak, nonatomic) IBOutlet UILabel *name;
 
 @end
