@@ -28,7 +28,7 @@ static NSString * const reuseIdentifier = @"ProductCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     //recievedProducts = @[@"a", @"b", @"c"];
     
     recievedProduct1 = [[Product alloc] init];
@@ -50,6 +50,18 @@ static NSString * const reuseIdentifier = @"ProductCell";
                             nil
                       ];
 }
+
+//    Take "jsonWebToken" in NSUserDefaults.
+//
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    
+//    NSString *jsonWebToken = [defaults valueForKey:@"jsonWebToken"];
+//    
+//    NSLog(@"test: %@", jsonWebToken);
+
+}
+
+#pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
