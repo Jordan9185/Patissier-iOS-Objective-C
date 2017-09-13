@@ -10,6 +10,7 @@
 #import "ProductCollectionViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "Product.h"
+#import "ProductManager.h"
 
 @interface ProductCollectionViewController() {
     
@@ -17,7 +18,7 @@
     Product *recievedProduct2;
     
     NSArray<__kindof Product *> *recievedProducts;
-
+    
 }
 
 @end
@@ -25,6 +26,8 @@
 @implementation ProductCollectionViewController
 
 static NSString * const reuseIdentifier = @"ProductCell";
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -49,6 +52,8 @@ static NSString * const reuseIdentifier = @"ProductCell";
                             test,
                             nil
                       ];
+    ProductManager* productManager = [[ProductManager alloc] init];
+    [productManager fetchProducts];
 
 //    Take "jsonWebToken" in NSUserDefaults.
 //
