@@ -12,13 +12,19 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    
+    [self setUpImageView];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setUpImageView {
+    
+    self.userImage.contentMode = UIViewContentModeScaleAspectFill;
 }
 
 @end
