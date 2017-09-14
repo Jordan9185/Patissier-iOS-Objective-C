@@ -70,6 +70,9 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    double height = [[UIScreen mainScreen] bounds].size.height - 220 - 44 - [self navigationController].navigationBar.frame.size.height - [self tabBarController].tabBar.frame.size.height - 20;
+    
     switch (indexPath.section) {
         case Profile:
             return UITableViewAutomaticDimension;
@@ -78,7 +81,8 @@
             return UITableViewAutomaticDimension;
             
         case Content:
-            return 500;
+            return height;
+;
     }
     return 150;
 }
@@ -129,6 +133,7 @@
         } else {
             
             ProfilePurchaseTableViewCell *purchaseCell = [tableView dequeueReusableCellWithIdentifier:@"ProfilePurchaseTableViewCell" forIndexPath:indexPath];
+
             return purchaseCell;
         }
         
