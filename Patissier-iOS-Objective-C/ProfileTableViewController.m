@@ -57,13 +57,17 @@
     
     switch (section) {
         case Profile:
+            
             return 1;
             
         case Segment:
+            
             return 1;
 
         case Content:
+            
             return 1;
+
     }
     return 1;
 }
@@ -71,20 +75,26 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    double height = [[UIScreen mainScreen] bounds].size.height - 220 - 44 - [self navigationController].navigationBar.frame.size.height - [self tabBarController].tabBar.frame.size.height - 20;
+    double contentHeight = [[UIScreen mainScreen] bounds].size.height - 220 - 44 - [self navigationController].navigationBar.frame.size.height - [self tabBarController].tabBar.frame.size.height - 20;
     
     switch (indexPath.section) {
+        
         case Profile:
+            
             return UITableViewAutomaticDimension;
             
         case Segment:
+            
             return UITableViewAutomaticDimension;
             
         case Content:
-            return height;
-;
+            
+            return contentHeight;
+
     }
+    
     return 150;
+
 }
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -100,6 +110,8 @@
         
         cell.name.text = @"James";
         
+        cell.selectionStyle = NO;
+        
         return cell;
     }
     
@@ -107,6 +119,8 @@
         
         ProfileSegmentedControlTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ProfileSegmentedControlTableViewCell" forIndexPath:indexPath];
         
+        cell.selectionStyle = NO;
+
         cell.favoriteButton.tag = 0;
         
         cell.purchasedButton.tag = 1;
@@ -126,15 +140,19 @@
         
         if (self.favoriteSegmentClicked == YES) {
             
-            ProductFavoriteTableViewCell *favoriteCell = [tableView dequeueReusableCellWithIdentifier:@"ProductFavoriteTableViewCell" forIndexPath:indexPath];
+            ProductFavoriteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ProductFavoriteTableViewCell" forIndexPath:indexPath];
             
-            return favoriteCell;
+            cell.selectionStyle = NO;
+            
+            return cell;
             
         } else {
             
-            ProfilePurchaseTableViewCell *purchaseCell = [tableView dequeueReusableCellWithIdentifier:@"ProfilePurchaseTableViewCell" forIndexPath:indexPath];
+            ProfilePurchaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ProfilePurchaseTableViewCell" forIndexPath:indexPath];
 
-            return purchaseCell;
+            cell.selectionStyle = NO;
+
+            return cell;
         }
         
     }
