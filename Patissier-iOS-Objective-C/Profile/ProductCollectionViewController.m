@@ -65,15 +65,34 @@ static NSString * const reuseIdentifier = @"ProductCell";
         
         Product *product = (Product *)receivedProduct;
         
+        cell.productBottomView.layer.borderWidth = 0.5;
+        
+        cell.productBottomView.layer.borderColor = [UIColor colorWithRed:74/255.0 green:74/255.0 blue:74/255.0 alpha:1].CGColor;
+        
         cell.productNameLabel.text = product.name;
         
-        cell.productPriceLabel.text = product.price.stringValue;
-        NSLog(@"1231231231231  %@", product.price);
+        cell.productPriceLabel.text = [[NSString alloc]initWithFormat:@"$ %@" , product.price];
+
+        cell.productImageView.contentMode = UIViewContentModeScaleAspectFit;
+        
         [cell.productImageView sd_setImageWithURL: product.imageURL];
         
     }
 
     return cell;
 }
+
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+//    if (scrollView.contentOffset.y == scrollView.contentSize.height - scrollView.frame.size.height)
+//    {
+//        //LOAD MORE
+//        // you can also add a isLoading bool value for better dealing :D
+//        productManager = [ProductManager alloc];
+//        
+//        productManager.delegate = self;
+//        
+//        [productManager fetchProducts];
+//    }
+//}
 
 @end

@@ -18,7 +18,7 @@
 @interface ProductManager : NSObject
 
 @property (weak, nonatomic) id<ProductDelegate> delegate;
--(void)fetchProducts;
 
+-(void)fetchProducts;
 
 @end

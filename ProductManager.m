@@ -15,8 +15,6 @@
 
 - (void)fetchProducts {
     
-    
-    
     NSMutableArray *products = [[NSMutableArray alloc] init];
     
     NSString *productURLString = @"http://52.198.40.72/patissier/api/v1/products";
@@ -56,9 +54,8 @@
             
             [products addObject: product];
             
-            NSLog(@"%@", product.price);
-            
             [self.delegate didGet:products];
+            
         }
         
     }];
