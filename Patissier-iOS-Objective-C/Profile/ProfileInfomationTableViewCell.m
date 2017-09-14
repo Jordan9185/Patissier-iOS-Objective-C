@@ -7,15 +7,11 @@
 //
 
 #import "ProfileInfomationTableViewCell.h"
-#import "UserManager.h"
-#import <SDWebImage/UIImageView+WebCache.h>
 
 @implementation ProfileInfomationTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
-    self.manager = [UserManager alloc];
     
     [self setUpImageView];
 }
@@ -28,20 +24,7 @@
 
 - (void)setUpImageView {
     
-    self.manager.delegate = self;
-    
-    [self.manager getMeProfile];
-    
-}
-
-- (void) managerDidGetUserProfile: (User *)user {
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        
-        [self.imageView sd_setImageWithURL: user.imageUrl];
-        
-    });
-    
+    self.userImage.contentMode = UIViewContentModeScaleAspectFill;
 }
 
 @end

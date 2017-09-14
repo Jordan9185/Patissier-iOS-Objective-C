@@ -14,11 +14,13 @@
 #import "ProfileContentFavoriteCollectionViewCell.h"
 #import "ProfilePurchaseTableViewCell.h"
 #import "ProductFavoriteTableViewCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface ProfileTableViewController ()
 
 @property (nonatomic, assign) BOOL favoriteSegmentClicked;
 
+@property (nonatomic, strong) User *currentUser;
 @end
 
 @implementation ProfileTableViewController
@@ -43,6 +45,14 @@
     [self.tableView registerNib:cellNib3 forCellReuseIdentifier:@"ProfileContentFavoriteTableViewCell"];
 
     self.favoriteSegmentClicked = YES;
+    
+    
+    
+    self.userManager = [UserManager alloc];
+    
+    self.userManager.delegate = self;
+    
+    [self.userManager getMeProfile];
 }
 
 #pragma mark - Table view data source
@@ -94,7 +104,13 @@
     if (indexPath.section == 0) {
         ProfileInfomationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ProfileInfomationTableViewCell" forIndexPath:indexPath];
         
-        cell.name.text = @"James";
+        if (self.currentUser != nil) {
+            
+            cell.nameLabel.text = self.currentUser.fullName;
+            
+            [cell.userImage sd_setImageWithURL: self.currentUser.imageUrl];
+            
+        }
         
         return cell;
     }
@@ -155,4 +171,15 @@
     [self.tableView reloadData];
 }
 
+- (void) managerDidGetUserProfile: (User *)user {
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        self.currentUser = user;
+        
+        [self.tableView reloadData];
+        
+    });
+    
+}
 @end

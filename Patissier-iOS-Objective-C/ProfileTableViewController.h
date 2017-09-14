@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "ProfileContentFavoriteCollectionViewController.h"
+#import "UserManager.h"
 
+@interface ProfileTableViewController : UITableViewController <UICollectionViewDataSource,UICollectionViewDelegateFlowLayout, UserManagerDelegate>
 
-@interface ProfileTableViewController : UITableViewController <UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@property (strong , nonatomic) UserManager *userManager;
 
 typedef enum {
     Profile = 0,
