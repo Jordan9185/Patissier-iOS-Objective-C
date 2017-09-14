@@ -103,10 +103,16 @@
         
         ProfileSegmentedControlTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ProfileSegmentedControlTableViewCell" forIndexPath:indexPath];
         
-        cell.favoriteButton.backgroundColor = [UIColor clearColor];
         cell.favoriteButton.tag = 0;
+        
         cell.purchasedButton.tag = 1;
+        
+        [self setUpSegmentButton: cell.favoriteButton];
+        
+        [self setUpSegmentButton: cell.purchasedButton];
+        
         [cell.favoriteButton addTarget:self action:@selector(segmentClicked:) forControlEvents:UIControlEventTouchUpInside];
+        
         [cell.purchasedButton addTarget:self action:@selector(segmentClicked:) forControlEvents:UIControlEventTouchUpInside];
         
         return cell;
@@ -153,6 +159,42 @@
     }
     
     [self.tableView reloadData];
+}
+
+-(void)setUpSegmentButton:(UIButton*)sender
+{
+    UIColor *tappedblack = [UIColor
+                            colorWithRed:0.0 / 255.0
+                            green:0.0/ 255.0
+                            blue:0.0 / 255.0
+                            alpha:0.2
+                            ];
+
+    sender.layer.cornerRadius = 4.0;
+    
+    if (self.favoriteSegmentClicked == YES)
+    {
+        if (sender.tag == 0)
+        {
+            sender.backgroundColor = tappedblack;
+        }
+        else
+        {
+            sender.backgroundColor = [UIColor clearColor];
+        }
+    }
+    else
+    {
+        if (sender.tag == 1)
+        {
+            sender.backgroundColor = tappedblack;
+        }
+        else
+        {
+            sender.backgroundColor = [UIColor clearColor];
+        }
+    }
+    
 }
 
 @end
