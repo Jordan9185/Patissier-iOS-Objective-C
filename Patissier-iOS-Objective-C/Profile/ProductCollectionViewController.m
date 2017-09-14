@@ -14,9 +14,6 @@
 
 @interface ProductCollectionViewController() {
     
-    Product *recievedProduct1;
-    Product *recievedProduct2;
-    
     NSArray<__kindof Product *> *receivedProducts;
     
 }
@@ -34,16 +31,6 @@ static NSString * const reuseIdentifier = @"ProductCell";
     
     productManager = [ProductManager alloc];
     
-    recievedProduct1 = [[Product alloc] init];
-    recievedProduct1.identifier = @"5947974173a7f08ded3e8269";
-    recievedProduct1.name = @"巧克力杯子蛋糕";
-    recievedProduct1.price = 120;
-    
-    recievedProduct2 = [[Product alloc] init];
-    recievedProduct2.name = @"yeahi";
-    recievedProduct2.identifier = @"5947974473a7f08ded3e826a";
-    recievedProduct2.price = 75;
-    
     productManager.delegate = self;
     
     [productManager fetchProducts];
@@ -56,7 +43,6 @@ static NSString * const reuseIdentifier = @"ProductCell";
     
     [self.collectionView reloadData];
     
-    NSLog(@"%@", receivedProducts);
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -81,8 +67,8 @@ static NSString * const reuseIdentifier = @"ProductCell";
         
         cell.productNameLabel.text = product.name;
         
-        cell.productPriceLabel.text = [NSString stringWithFormat:@"%ld", (long)product.price];
-        
+        cell.productPriceLabel.text = product.price.stringValue;
+        NSLog(@"1231231231231  %@", product.price);
         [cell.productImageView sd_setImageWithURL: product.imageURL];
         
     }

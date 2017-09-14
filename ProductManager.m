@@ -15,7 +15,7 @@
 
 - (void)fetchProducts {
     
-    Product *product = [[Product alloc] init];
+    
     
     NSMutableArray *products = [[NSMutableArray alloc] init];
     
@@ -46,24 +46,20 @@
             return ;
         }
         
-        //NSLog(@"%@", responseObject[@"data"]);
-
-        for (NSMutableDictionary *productInDict in responseObject[@"data"]) {
+        for (NSDictionary *productInDict in responseObject[@"data"]) {
+            
+            Product *product = [[Product alloc] init];
+            
             product.identifier = productInDict[@"id"];
             product.name = productInDict[@"name"];
-            product.price = NSInteger productInDict[@"price"];
-            
-            double qq = productInDict[@"price"];
-            
-            product.price = qq;
-            
-            
+            product.price = productInDict[@"price"];
             
             [products addObject: product];
             
+            NSLog(@"%@", product.price);
+            
+            [self.delegate didGet:products];
         }
-        
-        [self.delegate didGet:products];
         
     }];
     

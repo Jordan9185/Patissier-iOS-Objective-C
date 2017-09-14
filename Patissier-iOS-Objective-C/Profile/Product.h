@@ -15,7 +15,7 @@
 
 @property NSString *name;
 
-@property double price;
+@property NSNumber *price;
 
 - (NSURL *) imageURL;
 
