@@ -37,7 +37,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFb-bh-ZS3">
                                 <rect key="frame" x="42" y="37" width="92" height="15"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -75,6 +75,13 @@
                 <constraint firstItem="cFO-nd-txo" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="sQd-GJ-BYd"/>
             </constraints>
             <size key="customSize" width="241" height="212"/>
+            <connections>
+                <outlet property="productBottomView" destination="gpO-Yo-fVa" id="5Qk-6j-cXu"/>
+                <outlet property="productImageView" destination="cFO-nd-txo" id="qak-tB-BVE"/>
+                <outlet property="productLikeButton" destination="rOo-K8-6lh" id="iBe-2e-tbD"/>
+                <outlet property="productNameLabel" destination="fvQ-xK-qKX" id="JGD-Xy-V9e"/>
+                <outlet property="productPriceLabel" destination="lFb-bh-ZS3" id="ge3-aX-Gec"/>
+            </connections>
             <point key="canvasLocation" x="120" y="133"/>
         </collectionViewCell>
     </objects>
