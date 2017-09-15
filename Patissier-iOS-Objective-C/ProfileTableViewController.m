@@ -181,14 +181,10 @@
 }
 
 - (void) managerDidGetUserProfile: (User *)user {
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
         
-        self.currentUser = user;
+    self.currentUser = user;
         
-        [self.tableView reloadData];
-        
-    });
+    [self.tableView reloadData];
     
 }
 @end

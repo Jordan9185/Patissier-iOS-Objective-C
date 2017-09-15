@@ -13,8 +13,8 @@
         <!--Product Collection View Controller-->
         <scene sceneID="Q5p-dt-Wcp">
             <objects>
-                <collectionViewController id="3oC-R6-zm4" customClass="ProductCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="5Qe-oc-s6c">
+                <collectionViewController storyboardIdentifier="productCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3oC-R6-zm4" customClass="ProductCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="5Qe-oc-s6c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -102,24 +102,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q7m-9g-Fw5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="839.20000000000005" y="94.902548725637189"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Xhf-R2-IBs">
-            <objects>
-                <navigationController storyboardIdentifier="productNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Hgh-0I-eDK" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a4w-78-mvr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="3oC-R6-zm4" kind="relationship" relationship="rootViewController" id="nod-0G-rBF"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M7u-vA-K9E" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-100" y="94.902548725637189"/>
         </scene>
     </scenes>
 </document>

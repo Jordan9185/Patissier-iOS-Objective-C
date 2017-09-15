@@ -28,6 +28,7 @@
 		644DFE5C1F67DFC2008B29A6 /* ProductFavoriteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 644DFE5B1F67DFC2008B29A6 /* ProductFavoriteTableViewCell.m */; };
 		644DFE5F1F67E9D0008B29A6 /* ProfilePurchaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 644DFE5E1F67E9D0008B29A6 /* ProfilePurchaseTableViewCell.m */; };
 		644DFE621F67EAD6008B29A6 /* PurchasedProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 644DFE611F67EAD6008B29A6 /* PurchasedProductTableViewCell.m */; };
+		98572CAE1F6B705000E57B49 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98572CAD1F6B705000E57B49 /* NavigationController.m */; };
 		9870AD241F6679CE008430D5 /* LandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9870AD221F6679CE008430D5 /* LandingViewController.m */; };
 		9870AD2A1F6785B0008430D5 /* TabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9870AD291F6785B0008430D5 /* TabbarController.m */; };
 		9870AD7A1F691EC9008430D5 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9870AD791F691EC9008430D5 /* UserManager.m */; };
@@ -75,6 +76,8 @@
 		644DFE601F67EAD6008B29A6 /* PurchasedProductTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurchasedProductTableViewCell.h; sourceTree = "<group>"; };
 		644DFE611F67EAD6008B29A6 /* PurchasedProductTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchasedProductTableViewCell.m; sourceTree = "<group>"; };
 		92AD3DEDC0085568B6482492 /* Pods-Patissier-iOS-Objective-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Patissier-iOS-Objective-C.release.xcconfig"; path = "Pods/Target Support Files/Pods-Patissier-iOS-Objective-C/Pods-Patissier-iOS-Objective-C.release.xcconfig"; sourceTree = "<group>"; };
+		98572CAC1F6B705000E57B49 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NavigationController.h; path = NavigationController/NavigationController.h; sourceTree = "<group>"; };
+		98572CAD1F6B705000E57B49 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NavigationController.m; path = NavigationController/NavigationController.m; sourceTree = "<group>"; };
 		9870AD211F6679CE008430D5 /* LandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingViewController.h; sourceTree = "<group>"; };
 		9870AD221F6679CE008430D5 /* LandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingViewController.m; sourceTree = "<group>"; };
 		9870AD281F6785B0008430D5 /* TabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabbarController.h; path = TabbarController/TabbarController.h; sourceTree = "<group>"; };
@@ -159,6 +162,15 @@
 			name = Content;
 			sourceTree = "<group>";
 		};
+		98572CAB1F6B6FFC00E57B49 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				98572CAC1F6B705000E57B49 /* NavigationController.h */,
+				98572CAD1F6B705000E57B49 /* NavigationController.m */,
+			);
+			name = NavigationController;
+			sourceTree = "<group>";
+		};
 		9870AD1F1F667995008430D5 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +233,7 @@
 				9870AD1F1F667995008430D5 /* AppDelegate */,
 				9870AD201F6679A6008430D5 /* Landing */,
 				9870AD271F6784FC008430D5 /* TabbarController */,
+				98572CAB1F6B6FFC00E57B49 /* NavigationController */,
 				1567862F1F677C6800E17731 /* Product */,
 				644DFE371F6682A5008B29A6 /* Profile */,
 				9870AD771F691E3A008430D5 /* User */,
@@ -412,6 +425,7 @@
 				644DFE431F6682A5008B29A6 /* ProfileSegmentedControlTableViewCell.m in Sources */,
 				9870AD7D1F692395008430D5 /* User.m in Sources */,
 				1567863C1F677CFD00E17731 /* ProductCollectionViewCell.m in Sources */,
+				98572CAE1F6B705000E57B49 /* NavigationController.m in Sources */,
 				644DFE411F6682A5008B29A6 /* ProfileInfomationTableViewCell.m in Sources */,
 				644DFE4E1F67AD8A008B29A6 /* ProfileContentFavoriteTableViewCell.m in Sources */,
 			);
