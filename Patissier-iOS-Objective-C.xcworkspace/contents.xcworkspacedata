@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:ProductDelegate.h">
-   </FileRef>
-   <FileRef
       location = "group:Patissier-iOS-Objective-C.xcodeproj">
    </FileRef>
    <FileRef
