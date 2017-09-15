@@ -9,10 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ProfileContentFavoriteCollectionViewCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UILabel *productNameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *productPriceLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *productImageView;
-@property (weak, nonatomic) IBOutlet UIView *productBottomView;
-@property (weak, nonatomic) IBOutlet UIButton *productLikeButton;
 
 @end

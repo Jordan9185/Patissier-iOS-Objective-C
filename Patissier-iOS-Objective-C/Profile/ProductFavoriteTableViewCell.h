@@ -12,6 +12,4 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
-@property (strong) NSMutableArray *products;
-
 @end

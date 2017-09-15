@@ -22,7 +22,6 @@
 		644DFE5C1F67DFC2008B29A6 /* ProductFavoriteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 644DFE5B1F67DFC2008B29A6 /* ProductFavoriteTableViewCell.m */; };
 		644DFE5F1F67E9D0008B29A6 /* ProfilePurchaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 644DFE5E1F67E9D0008B29A6 /* ProfilePurchaseTableViewCell.m */; };
 		644DFE621F67EAD6008B29A6 /* PurchasedProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 644DFE611F67EAD6008B29A6 /* PurchasedProductTableViewCell.m */; };
-		649DE5291F6A64790080FCBF /* ProductModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 649DE5271F6A64790080FCBF /* ProductModel.xcdatamodeld */; };
 		98335B3F1F6B9CBF00EA4293 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 98335B3E1F6B9CBF00EA4293 /* Product.m */; };
 		98335B441F6B9D3D00EA4293 /* ProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 98335B411F6B9D3D00EA4293 /* ProductCollectionViewCell.m */; };
 		98335B451F6B9D3D00EA4293 /* ProductCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98335B431F6B9D3D00EA4293 /* ProductCollectionViewController.m */; };
@@ -30,7 +29,6 @@
 		98335B4A1F6B9DE300EA4293 /* ProductManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 98335B491F6B9DE300EA4293 /* ProductManager.m */; };
 		98335B4D1F6B9E8200EA4293 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98335B4C1F6B9E8200EA4293 /* AppDelegate.m */; };
 		98335B501F6B9EDC00EA4293 /* LandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98335B4F1F6B9EDC00EA4293 /* LandingViewController.m */; };
-		983450791F6BA8E5001EC88F /* ProfileTableViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 983450781F6BA8E5001EC88F /* ProfileTableViewController.h */; };
 		983450791F6BA8E5001EC88F /* ProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 983450781F6BA8E5001EC88F /* ProfileTableViewController.m */; };
 		9834507B1F6BA8EB001EC88F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9834507A1F6BA8EB001EC88F /* Profile.storyboard */; };
 		98572CAE1F6B705000E57B49 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98572CAD1F6B705000E57B49 /* NavigationController.m */; };
@@ -68,7 +66,6 @@
 		644DFE5E1F67E9D0008B29A6 /* ProfilePurchaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePurchaseTableViewCell.m; sourceTree = "<group>"; };
 		644DFE601F67EAD6008B29A6 /* PurchasedProductTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurchasedProductTableViewCell.h; sourceTree = "<group>"; };
 		644DFE611F67EAD6008B29A6 /* PurchasedProductTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchasedProductTableViewCell.m; sourceTree = "<group>"; };
-		649DE5281F6A64790080FCBF /* ProductModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProductModel.xcdatamodel; sourceTree = "<group>"; };
 		92AD3DEDC0085568B6482492 /* Pods-Patissier-iOS-Objective-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Patissier-iOS-Objective-C.release.xcconfig"; path = "Pods/Target Support Files/Pods-Patissier-iOS-Objective-C/Pods-Patissier-iOS-Objective-C.release.xcconfig"; sourceTree = "<group>"; };
 		98335B3D1F6B9CBF00EA4293 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Product.h; path = "Patissier-iOS-Objective-C/Product/Product.h"; sourceTree = SOURCE_ROOT; };
 		98335B3E1F6B9CBF00EA4293 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Product.m; path = "Patissier-iOS-Objective-C/Product/Product.m"; sourceTree = SOURCE_ROOT; };
@@ -264,7 +261,6 @@
 				9870AD771F691E3A008430D5 /* User */,
 				98E15DAD1F661F0C000E1B9B /* Assets.xcassets */,
 				644DFE471F668512008B29A6 /* Main.storyboard */,
-				649DE5271F6A64790080FCBF /* ProductModel.xcdatamodeld */,
 				98E15DAF1F661F0C000E1B9B /* LaunchScreen.storyboard */,
 				98E15DB21F661F0C000E1B9B /* Info.plist */,
 				98E15DA11F661F0C000E1B9B /* Supporting Files */,
@@ -365,7 +361,6 @@
 				644DFE531F67B4DA008B29A6 /* ProfileContentFavoriteCollectionViewCell.xib in Resources */,
 				644DFE441F6682A5008B29A6 /* ProfileSegmentedControlTableViewCell.xib in Resources */,
 				98335B471F6B9D6A00EA4293 /* Product.storyboard in Resources */,
-				642E2E771F6BB74E00159085 /* Profile.storyboard in Resources */,
 				98E15DB11F661F0C000E1B9B /* LaunchScreen.storyboard in Resources */,
 				98E15DAE1F661F0C000E1B9B /* Assets.xcassets in Resources */,
 				98E15DBF1F662597000E1B9B /* (null) in Resources */,
@@ -619,20 +614,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		649DE5271F6A64790080FCBF /* ProductModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				649DE5281F6A64790080FCBF /* ProductModel.xcdatamodel */,
-			);
-			currentVersion = 649DE5281F6A64790080FCBF /* ProductModel.xcdatamodel */;
-			name = ProductModel.xcdatamodeld;
-			path = coredata/ProductModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 98E15D961F661F0C000E1B9B /* Project object */;
 }
