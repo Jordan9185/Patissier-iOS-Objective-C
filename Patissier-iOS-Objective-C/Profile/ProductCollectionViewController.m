@@ -93,6 +93,10 @@ static NSString * const reuseIdentifier = @"ProductCell";
         
         cell.productPriceLabel.text = [NSString stringWithFormat:@"%ld", (long)product.price];
         
+        cell.productLikeButton.tag = indexPath.row;
+        
+        [cell.productLikeButton addTarget:self action:@selector(addToFavorite:) forControlEvents:UIControlEventTouchUpInside];
+        
         [cell.productImageView sd_setImageWithURL: product.imageURL];
         
     }
@@ -112,21 +116,31 @@ static NSString * const reuseIdentifier = @"ProductCell";
     return cell;
 }
 
--(void) addToFavorite:(Product*)product
+-(void)addToFavorite:(UIButton*)sender
 {
 
-    NSManagedObjectContext *context = [self managedObjectContext];
+    id receivedProduct = [recievedProducts objectAtIndex: sender.tag];
     
-    // Create a new managed object
-    NSManagedObject *newProduct = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:context];
-    [newProduct setValue:product.name forKey:@"name"];
-    [newProduct setValue:product.identifier forKey:@"identifier"];
-    [newProduct setValue:[NSString stringWithFormat:@"%ld", (long)product.price] forKey:@"price"];
-    
-    NSError *error = nil;
-    // Save the object to persistent store
-    if (![context save:&error]) {
-        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+    if ([receivedProduct isKindOfClass:[Product class]]) {
+        
+        Product *product = (Product *)receivedProduct;
+        
+        NSManagedObjectContext *context = [self managedObjectContext];
+        
+        // Create a new managed object
+        NSManagedObject *newProduct = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:context];
+        [newProduct setValue:product.name forKey:@"name"];
+        [newProduct setValue:product.identifier forKey:@"identifier"];
+        [newProduct setValue:[NSString stringWithFormat:@"%ld", (long)product.price] forKey:@"price"];
+        
+        NSError *error = nil;
+        // Save the object to persistent store
+        if (![context save:&error]) {
+            NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+        }
+
+        NSLog(@"Save Context");
+        
     }
 
 }

@@ -12,8 +12,6 @@
 
 @interface ProductFavoriteTableViewCell () <UICollectionViewDelegate, UICollectionViewDataSource>
 
-@property (strong) NSMutableArray *products;
-
 @end
 
 @implementation ProductFavoriteTableViewCell
@@ -31,15 +29,6 @@
     self.collectionView.delegate = self;
     
     self.collectionView.dataSource = self;
-
-/*
-    // Fetch the devices from persistent data store
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-    
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Product"];
-    
-    self.products = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-*/
 
 }
 
@@ -64,23 +53,5 @@
     return cell;
 }
 
-#pragma mark - Core Data
-
-- (NSManagedObjectContext *)managedObjectContext
-{
-
-    NSManagedObjectContext *context = nil;
-
-    id delegate = [[UIApplication sharedApplication] delegate];
-
-    if ([delegate performSelector:@selector(managedObjectContext)]) {
-        
-        context = [delegate managedObjectContext];
-        
-    }
-
-    return context;
-
-}
 
 @end

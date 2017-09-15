@@ -15,12 +15,15 @@
 #import "ProfilePurchaseTableViewCell.h"
 #import "ProductFavoriteTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <CoreData/CoreData.h>
 
 @interface ProfileTableViewController ()
 
 @property (nonatomic, assign) BOOL favoriteSegmentClicked;
 
 @property (nonatomic, strong) User *currentUser;
+
+@property (strong) NSMutableArray *products;
 
 @end
 
@@ -53,6 +56,20 @@
 
     [self.userManager getMeProfile];
 
+    NSLog(@"Helloooooooooo");
+
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self fetchData];
+
+    [self.tableView reloadData];
+    
+    NSLog(@"Hi view will appear");
+    
 }
 
 #pragma mark - Table view data source
@@ -158,6 +175,10 @@
 
             ProductFavoriteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ProductFavoriteTableViewCell" forIndexPath:indexPath];
 
+            cell.products = self.products;
+            
+            [cell.collectionView reloadData];
+            
             cell.selectionStyle = NO;
 
             return cell;
@@ -246,6 +267,36 @@
 
     });
 
+}
+
+-(void) fetchData
+{
+    // Fetch the devices from persistent data store
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Product"];
+    
+    self.products = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+
+}
+
+#pragma mark - Core Data
+
+- (NSManagedObjectContext *)managedObjectContext
+{
+    
+    NSManagedObjectContext *context = nil;
+    
+    id delegate = [[UIApplication sharedApplication] delegate];
+    
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        
+        context = [delegate managedObjectContext];
+        
+    }
+    
+    return context;
+    
 }
 
 @end
