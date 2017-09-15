@@ -30,6 +30,7 @@ ProductManager *productManager;
 static NSString * const reuseIdentifier = @"ProductCell";
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     productManager = [ProductManager alloc];
