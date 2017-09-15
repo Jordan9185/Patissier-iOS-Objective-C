@@ -7,9 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import "TabbarController.h"
-#import "LandingViewController.h"
 
 @interface AppDelegate ()
 

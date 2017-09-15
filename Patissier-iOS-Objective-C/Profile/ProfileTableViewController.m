@@ -65,7 +65,7 @@
     [super viewWillAppear:animated];
     
     [self fetchData];
-
+// GCD
     [self.tableView reloadData];
     
     NSLog(@"Hi view will appear");

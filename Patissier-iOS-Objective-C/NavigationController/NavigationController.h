@@ -12,6 +12,4 @@
 
 -(id)initWithTitle:(NSString *)title;
 
--(NSString *)title;
-
 @end

@@ -7,9 +7,6 @@
 //
 
 #import "LandingViewController.h"
-#import "TabbarController.h"
-#import "AppDelegate.h"
-#import "AFNetworking.h"
 
 @interface LandingViewController ()
 

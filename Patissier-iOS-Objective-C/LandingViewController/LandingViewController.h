@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "TabbarController.h"
+#import "AppDelegate.h"
+#import "AFNetworking.h"
 
 @interface LandingViewController : UIViewController
 
