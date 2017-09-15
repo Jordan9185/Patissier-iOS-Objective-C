@@ -8,8 +8,11 @@
 
 #import "ProductFavoriteTableViewCell.h"
 #import "ProfileContentFavoriteCollectionViewCell.h"
+#import <CoreData/CoreData.h>
 
 @interface ProductFavoriteTableViewCell () <UICollectionViewDelegate, UICollectionViewDataSource>
+
+@property (strong) NSMutableArray *products;
 
 @end
 
@@ -29,6 +32,13 @@
     
     self.collectionView.dataSource = self;
 
+    // Fetch the devices from persistent data store
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Product"];
+    
+    self.products = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -39,7 +49,9 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 8;
+
+    return _products.count;
+
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
@@ -50,5 +62,23 @@
     return cell;
 }
 
+#pragma mark - Core Data
+
+- (NSManagedObjectContext *)managedObjectContext
+{
+
+    NSManagedObjectContext *context = nil;
+
+    id delegate = [[UIApplication sharedApplication] delegate];
+
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        
+        context = [delegate managedObjectContext];
+        
+    }
+
+    return context;
+
+}
 
 @end

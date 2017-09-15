@@ -21,6 +21,7 @@
 @property (nonatomic, assign) BOOL favoriteSegmentClicked;
 
 @property (nonatomic, strong) User *currentUser;
+
 @end
 
 @implementation ProfileTableViewController
@@ -46,13 +47,12 @@
 
     self.favoriteSegmentClicked = YES;
 
-
-
     self.userManager = [UserManager alloc];
 
     self.userManager.delegate = self;
 
     [self.userManager getMeProfile];
+
 }
 
 #pragma mark - Table view data source

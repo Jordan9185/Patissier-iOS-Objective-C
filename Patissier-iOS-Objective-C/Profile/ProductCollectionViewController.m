@@ -10,6 +10,8 @@
 #import "ProductCollectionViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "Product.h"
+#import <CoreData/CoreData.h>
+
 
 @interface ProductCollectionViewController() {
     
@@ -30,6 +32,7 @@ static NSString * const reuseIdentifier = @"ProductCell";
     [super viewDidLoad];
 
     //recievedProducts = @[@"a", @"b", @"c"];
+    
     
     recievedProduct1 = [[Product alloc] init];
     recievedProduct1.identifier = @"5947974173a7f08ded3e8269";
@@ -108,5 +111,41 @@ static NSString * const reuseIdentifier = @"ProductCell";
     
     return cell;
 }
+
+-(void) addToFavorite:(Product*)product
+{
+
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    // Create a new managed object
+    NSManagedObject *newProduct = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:context];
+    [newProduct setValue:product.name forKey:@"name"];
+    [newProduct setValue:product.identifier forKey:@"identifier"];
+    [newProduct setValue:[NSString stringWithFormat:@"%ld", (long)product.price] forKey:@"price"];
+    
+    NSError *error = nil;
+    // Save the object to persistent store
+    if (![context save:&error]) {
+        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+    }
+
+}
+
+- (NSManagedObjectContext *)managedObjectContext {
+    
+    NSManagedObjectContext *context = nil;
+    
+    id delegate = [[UIApplication sharedApplication] delegate];
+    
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        
+        context = [delegate managedObjectContext];
+        
+    }
+    
+    return context;
+    
+}
+
 
 @end
