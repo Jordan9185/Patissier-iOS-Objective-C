@@ -8,10 +8,6 @@
 
 #import "ProductFavoriteTableViewCell.h"
 #import "ProfileContentFavoriteCollectionViewCell.h"
-#import <SDWebImage/UIImageView+WebCache.h>
-#import "Product.h"
-#import "ProductManager.h"
-#import <CoreData/CoreData.h>
 
 @interface ProductFavoriteTableViewCell () <UICollectionViewDelegate, UICollectionViewDataSource>
 
@@ -43,9 +39,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-
-    return _products.count;
-
+    return 8;
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
@@ -53,31 +47,6 @@
 {
     ProfileContentFavoriteCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ProfileContentFavoriteCollectionViewCell" forIndexPath:indexPath];
     
-    id receivedProduct = [self.products objectAtIndex: indexPath.row];
-
-    //if ([receivedProduct isKindOfClass:[Product class]]) {
-        
-        Product *product = (Product *)receivedProduct;
-        
-        cell.productBottomView.layer.borderWidth = 0.5;
-        
-        cell.productBottomView.layer.borderColor = [UIColor colorWithRed:74/255.0 green:74/255.0 blue:74/255.0 alpha:1].CGColor;
-        
-        cell.productNameLabel.text = product.name;
-        
-        cell.productPriceLabel.text = [[NSString alloc]initWithFormat:@"$ %@" , product.price];
-        
-        cell.productImageView.contentMode = UIViewContentModeScaleAspectFit;
-    
-        NSString *urlString = [NSString stringWithFormat: @"http://52.198.40.72/patissier/products/%@/preview.jpg", product.identifier];
-    
-        [cell.productImageView sd_setImageWithURL: urlString];
-        
-        cell.productLikeButton.tag = indexPath.row;
-        
-        //[cell.productLikeButton addTarget:self action:@selector(addToFavorite:) forControlEvents:UIControlEventTouchUpInside];
-    //}
-
     return cell;
 }
 

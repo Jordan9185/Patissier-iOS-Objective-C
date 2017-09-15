@@ -11,8 +11,6 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "Product.h"
 #import "ProductManager.h"
-#import <CoreData/CoreData.h>
-
 //#import <UIScrollView_InfiniteScroll/UIScrollView+InfiniteScroll.h>
 
 @interface ProductCollectionViewController() {
@@ -30,7 +28,6 @@ ProductManager *productManager;
 static NSString * const reuseIdentifier = @"ProductCell";
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     productManager = [ProductManager alloc];
@@ -81,9 +78,6 @@ static NSString * const reuseIdentifier = @"ProductCell";
         
         [cell.productImageView sd_setImageWithURL: product.imageURL];
         
-        cell.productLikeButton.tag = indexPath.row;
-        
-        [cell.productLikeButton addTarget:self action:@selector(addToFavorite:) forControlEvents:UIControlEventTouchUpInside];
     }
 
     return cell;
@@ -101,45 +95,5 @@ static NSString * const reuseIdentifier = @"ProductCell";
 //        [productManager fetchProducts];
 //    }
 //}
-
--(void) addToFavorite:(UIButton*)sender
-{
-    id receivedProduct = [receivedProducts objectAtIndex: sender.tag];
-    
-    if ([receivedProduct isKindOfClass:[Product class]]) {
-        
-        Product *product = (Product *)receivedProduct;
-        
-        NSManagedObjectContext *context = [self managedObjectContext];
-        
-        // Create a new managed object
-        NSManagedObject *newProduct = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:context];
-        [newProduct setValue:product.name forKey:@"name"];
-        [newProduct setValue:product.identifier forKey:@"identifier"];
-        [newProduct setValue:[NSString stringWithFormat:@"%ld", (long)product.price] forKey:@"price"];
-        
-        NSError *error = nil;
-        // Save the object to persistent store
-        if (![context save:&error]) {
-            NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
-        }
-    }
-}
-
-- (NSManagedObjectContext *)managedObjectContext {
-    
-    NSManagedObjectContext *context = nil;
-    
-    id delegate = [[UIApplication sharedApplication] delegate];
-    
-    if ([delegate performSelector:@selector(managedObjectContext)]) {
-        
-        context = [delegate managedObjectContext];
-        
-    }
-    
-    return context;
-    
-}
 
 @end
