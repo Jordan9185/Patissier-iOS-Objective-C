@@ -75,6 +75,13 @@
                 <constraint firstItem="cFO-nd-txo" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="sQd-GJ-BYd"/>
             </constraints>
             <size key="customSize" width="241" height="212"/>
+            <connections>
+                <outlet property="productBottomView" destination="gpO-Yo-fVa" id="5Qk-6j-cXu"/>
+                <outlet property="productImageView" destination="cFO-nd-txo" id="qak-tB-BVE"/>
+                <outlet property="productLikeButton" destination="rOo-K8-6lh" id="iBe-2e-tbD"/>
+                <outlet property="productNameLabel" destination="fvQ-xK-qKX" id="JGD-Xy-V9e"/>
+                <outlet property="productPriceLabel" destination="lFb-bh-ZS3" id="ge3-aX-Gec"/>
+            </connections>
             <point key="canvasLocation" x="120" y="133"/>
         </collectionViewCell>
     </objects>
