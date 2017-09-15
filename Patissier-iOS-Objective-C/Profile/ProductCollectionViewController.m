@@ -10,54 +10,40 @@
 #import "ProductCollectionViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "Product.h"
+#import "ProductManager.h"
+#import <UIScrollView_InfiniteScroll/UIScrollView+InfiniteScroll.h>
 
 @interface ProductCollectionViewController() {
     
-    Product *recievedProduct1;
-    Product *recievedProduct2;
+    NSArray<__kindof Product *> *receivedProducts;
     
-    NSArray<__kindof Product *> *recievedProducts;
-
 }
 
 @end
 
 @implementation ProductCollectionViewController
 
+ProductManager *productManager;
+
 static NSString * const reuseIdentifier = @"ProductCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    productManager = [ProductManager alloc];
+    
+    productManager.delegate = self;
+    
+    [productManager fetchProducts];
 
-    //recievedProducts = @[@"a", @"b", @"c"];
-    
-    recievedProduct1 = [[Product alloc] init];
-    recievedProduct1.identifier = @"5947974173a7f08ded3e8269";
-    recievedProduct1.name = @"巧克力杯子蛋糕";
-    recievedProduct1.price = 120;
-    
-    recievedProduct2 = [[Product alloc] init];
-    recievedProduct2.name = @"yeahi";
-    recievedProduct2.identifier = @"5947974473a7f08ded3e826a";
-    recievedProduct2.price = 75;
-    
-    NSNumber *test = @1;
-    
-    recievedProducts = [NSArray arrayWithObjects:
-                            recievedProduct1,
-                            recievedProduct2,
-                            test,
-                            nil
-                      ];
+}
 
-//    Take "jsonWebToken" in NSUserDefaults.
-//
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    
-//    NSString *jsonWebToken = [defaults valueForKey:@"jsonWebToken"];
-//    
-//    NSLog(@"test: %@", jsonWebToken);
-
+-(void)didGet:(NSMutableArray *)products {
+    
+    receivedProducts = products;
+    
+    [self.collectionView reloadData];
+    
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -66,47 +52,48 @@ static NSString * const reuseIdentifier = @"ProductCell";
     return 1;
 }
 
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 
-    return recievedProducts.count;
+    return receivedProducts.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ProductCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-//    Product *product = [recievedProducts objectAtIndex:indexPath.row];
-    
-    id receivedProduct = [recievedProducts objectAtIndex: indexPath.row];
-    
-    //Product *productTest =  [[recievedProducts objectAtIndex:indexPath.row] name];
-    //productTest.name = @"123";
+
+    id receivedProduct = [receivedProducts objectAtIndex: indexPath.row];
     
     if ([receivedProduct isKindOfClass:[Product class]]) {
         
         Product *product = (Product *)receivedProduct;
         
+        cell.productBottomView.layer.borderWidth = 0.5;
+        
+        cell.productBottomView.layer.borderColor = [UIColor colorWithRed:74/255.0 green:74/255.0 blue:74/255.0 alpha:1].CGColor;
+        
         cell.productNameLabel.text = product.name;
         
-        cell.productPriceLabel.text = [NSString stringWithFormat:@"%ld", (long)product.price];
+        cell.productPriceLabel.text = [[NSString alloc]initWithFormat:@"$ %@" , product.price];
+
+        cell.productImageView.contentMode = UIViewContentModeScaleAspectFit;
         
         [cell.productImageView sd_setImageWithURL: product.imageURL];
         
     }
-    
-    
-//    Product *product = (Product *)[recievedProducts objectAtIndex:indexPath.row];
-//    
-//    if (product.name != nil) {
-//        cell.productNameLabel.text = product.name;
-//    }
 
-//    NSString *productPrice = [[recievedProducts objectAtIndex:indexPath.row] price];
-//    [cell.productPriceLabel text: [recievedProducts objectAtIndex:indexPath.row] price];
-    
-    //[cell.productImageView sd_setImageWithURL: [recievedProducts objectAtIndex:indexPath.row]];
-    
     return cell;
 }
+
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+//    if (scrollView.contentOffset.y == scrollView.contentSize.height - scrollView.frame.size.height)
+//    {
+//        //LOAD MORE
+//        // you can also add a isLoading bool value for better dealing :D
+//        productManager = [ProductManager alloc];
+//        
+//        productManager.delegate = self;
+//        
+//        [productManager fetchProducts];
+//    }
+//}
 
 @end
