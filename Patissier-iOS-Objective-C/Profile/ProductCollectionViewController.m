@@ -11,6 +11,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "Product.h"
 #import "ProductManager.h"
+#import <UIScrollView_InfiniteScroll/UIScrollView+InfiniteScroll.h>
 
 @interface ProductCollectionViewController() {
     

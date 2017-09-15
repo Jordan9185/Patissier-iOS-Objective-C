@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'CA8B4338022DB5E197A3B1F41EDFB332'
-               BlueprintName = 'SDWebImage'
+               BlueprintIdentifier = '20BE15FDDABEB4D7DEDE49D6A12B1272'
+               BlueprintName = 'UIScrollView-InfiniteScroll'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libSDWebImage.a'>
+               BuildableName = 'libUIScrollView-InfiniteScroll.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
