@@ -32,12 +32,14 @@
     
     self.collectionView.dataSource = self;
 
+/*
     // Fetch the devices from persistent data store
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Product"];
     
     self.products = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+*/
 
 }
 
