@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface LandingViewController : UIViewController
+
+@property (strong, nonatomic) IBOutlet UIImageView *landingImageView;
+
+@property (strong, nonatomic) IBOutlet UIView *GradientView;
 
 @end
