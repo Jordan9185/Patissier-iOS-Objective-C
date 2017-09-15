@@ -8,11 +8,6 @@
 
 #import "NavigationController.h"
 
-@interface NavigationController ()
-
-
-@end
-
 @implementation NavigationController
 
 -(id)initWithTitle:(NSString *)title {

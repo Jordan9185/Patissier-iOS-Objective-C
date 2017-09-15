@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NavigationController.h"
+#import "ProductCollectionViewController.h"
+#import "ProfileTableViewController.h"
 
 @interface TabbarController : UITabBarController
 

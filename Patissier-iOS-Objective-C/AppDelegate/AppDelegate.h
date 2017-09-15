@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import "TabbarController.h"
+#import "LandingViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

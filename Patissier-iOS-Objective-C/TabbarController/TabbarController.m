@@ -7,9 +7,6 @@
 //
 
 #import "TabbarController.h"
-#import "NavigationController.h"
-#import "ProductCollectionViewController.h"
-#import "ProfileTableViewController.h"
 
 @implementation TabbarController
 
