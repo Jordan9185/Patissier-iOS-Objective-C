@@ -7,51 +7,56 @@
 		<key>AFNetworking.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>6</integer>
 		</dict>
 		<key>Bolts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>FBSDKCoreKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<key>FBSDKLoginKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<key>FBSDKMessengerShareKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>3</integer>
 		</dict>
 		<key>FBSDKShareKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>4</integer>
 		</dict>
 		<key>Pods-Patissier-iOS-Objective-C.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>5</integer>
 		</dict>
 		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>UIScrollView-InfiniteScroll.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>8</integer>
@@ -59,6 +64,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>20BE15FDDABEB4D7DEDE49D6A12B1272</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3C7B23B3FE0CE1A6131C7E09B3F47DA3</key>
 		<dict>
 			<key>primary</key>
@@ -74,12 +84,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>8D2870F6A64E199320BF614DF5032B90</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9E033EDB5EC0819481B0546434FA577B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B9D69894797AA2DA528B1C7AC33C98B6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CA8B4338022DB5E197A3B1F41EDFB332</key>
 		<dict>
 			<key>primary</key>
 			<true/>

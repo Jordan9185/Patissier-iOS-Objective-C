@@ -27,7 +27,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
-    
+
     NSString *jsonWebToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"jsonWebToken"];
     
     if (jsonWebToken != nil) {

@@ -7,12 +7,9 @@
 //
 
 #import "TabbarController.h"
+#import "NavigationController.h"
 #import "ProductCollectionViewController.h"
 #import "ProfileTableViewController.h"
-
-@interface TabbarController ()
-
-@end
 
 @implementation TabbarController
 
@@ -31,7 +28,44 @@
     
 }
 
--(UITabBarItem *)setUpProductCollectionViewControllerTabBarItem {
+- (UINavigationController *)setUpProductNavigationController {
+    
+    UIStoryboard *storyBoard = [UIStoryboard
+                                storyboardWithName:@"Product"
+                                bundle:nil];
+    
+    ProductCollectionViewController *productCollectionViewController = [storyBoard
+                                                                instantiateViewControllerWithIdentifier:@"productCollectionViewController"];
+    
+    NavigationController *navigationController = [[NavigationController alloc] initWithTitle: @"Pâtissier"];
+    
+    navigationController.tabBarItem = [self setUpProductCollectionViewControllerTabBarItem];
+    
+    [navigationController setViewControllers: [NSArray arrayWithObject:productCollectionViewController] animated:YES];
+    
+    return navigationController;
+}
+
+- (UINavigationController *)setUpProfileNavigationController {
+    
+    UIStoryboard *storyBoard = [UIStoryboard
+                                storyboardWithName:@"Profile"
+                                bundle:nil];
+    
+    ProfileTableViewController *profileTableViewController = [storyBoard
+                                                              instantiateViewControllerWithIdentifier:@"profileTableViewController"];
+    
+    NavigationController *navigationController = [[NavigationController alloc] initWithTitle: @"Profile"];
+    
+    navigationController.tabBarItem = [self setUpProfileTableViewControllerTabBarItem];
+    
+    [navigationController setViewControllers: [NSArray arrayWithObject:profileTableViewController] animated:YES];
+    
+    return navigationController;
+}
+
+
+- (UITabBarItem *)setUpProductCollectionViewControllerTabBarItem {
     
     UITabBarItem *tabBarItem = [[UITabBarItem alloc]
                                 initWithTitle: @"Store"
@@ -41,7 +75,7 @@
     return tabBarItem;
 }
 
--(UITabBarItem *)setUpProfileTableViewControllerTabBarItem {
+- (UITabBarItem *)setUpProfileTableViewControllerTabBarItem {
     
     UITabBarItem *tabBarItem = [[UITabBarItem alloc]
                                 initWithTitle: @"Profile"
@@ -49,40 +83,6 @@
                                 tag:0];
     
     return tabBarItem;
-}
-
--(UINavigationController *)setUpProductNavigationController {
-    
-    UIStoryboard *productStoryBoard = [UIStoryboard
-                                       storyboardWithName:@"Product"
-                                       bundle:nil];
-    
-    UINavigationController *productNavigationController = [productStoryBoard instantiateViewControllerWithIdentifier:@"productNavigationController"];
-    
-    productNavigationController.tabBarItem = [self setUpProductCollectionViewControllerTabBarItem];
-    
-    ProductCollectionViewController *productCollectionViewController = [ProductCollectionViewController alloc];
-    
-    [productNavigationController.childViewControllers arrayByAddingObject: productCollectionViewController];
-    
-    return productNavigationController;
-}
-
--(UINavigationController *)setUpProfileNavigationController {
-    
-    UIStoryboard *profileStoryBoard = [UIStoryboard
-                                       storyboardWithName:@"Profile"
-                                       bundle:nil];
-    
-    UINavigationController *profileNavigationController = [profileStoryBoard instantiateViewControllerWithIdentifier:@"profileNavigationController"];
-    
-    profileNavigationController.tabBarItem = [self setUpProfileTableViewControllerTabBarItem];
-    
-    ProfileTableViewController *profileTableViewController = [ProfileTableViewController alloc];
-    
-    [profileNavigationController.childViewControllers arrayByAddingObject: profileTableViewController];
-    
-    return profileNavigationController;
 }
 
 - (void) setUpTabBar {

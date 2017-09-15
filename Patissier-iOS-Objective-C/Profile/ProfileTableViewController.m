@@ -137,9 +137,14 @@
 
         if (self.currentUser != nil) {
 
-            cell.nameLabel.text = self.currentUser.fullName;
-
-            [cell.userImage sd_setImageWithURL: self.currentUser.imageUrl];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                cell.nameLabel.text = self.currentUser.fullName;
+                
+                [cell.userImage sd_setImageWithURL: self.currentUser.imageUrl];
+                
+            });
 
         }
 
@@ -296,7 +301,11 @@
     }
     
     return context;
-    
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+
+    return UIStatusBarStyleLightContent;
 }
 
 @end

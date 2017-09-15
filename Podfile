@@ -12,4 +12,5 @@ target 'Patissier-iOS-Objective-C' do
 	pod "FBSDKMessengerShareKit";
 	pod "SDWebImage";
 	pod "AFNetworking";
+	pod "UIScrollView-InfiniteScroll";
 end
